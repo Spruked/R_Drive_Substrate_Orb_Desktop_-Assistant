@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "name": "CALI Research Substrate",
+  "updated_on": "2026-03-16",
+  "drive_root": "R:\\",
+  "role": "offline_cache_and_research_substrate",
+  "mission": [
+    "Provide CALI with a preserve-first offline research cache.",
+    "Mirror high-value public datasets for local retrieval and analysis.",
+    "Support embeddings, vector indexes, cross-reference tables, and entity graphs.",
+    "Preserve long-term Cali-centered continuity independent of fragile APIs."
+  ],
+  "core_capabilities": [
+    "api_response_caching",
+    "bulk_dataset_mirroring",
+    "embedding_generation",
+    "vector_search",
+    "cross_reference_indexing",
+    "snapshotting",
+    "registry_exports",
+    "dedupe_compress_shard_retrieve"
+  ],
+  "storage_zones": {
+    "api_cache": "Cached raw and normalized API payloads.",
+    "datasets": "Bulk mirrors and curated offline corpora.",
+    "embeddings": "Semantic embeddings grouped by domain and source family.",
+    "indexes": "Keyword, faceted, and cross-reference indexes.",
+    "logs": "Ingestion, sync, and audit logs.",
+    "manifests": "Drive manifests, registries, and build plans.",
+    "registry_exports": "Portable metadata exports and catalogs.",
+    "snapshots": "Dated point-in-time copies of important data assets.",
+    "tiles": "Geospatial and visualization tile caches.",
+    "vector_indexes": "Vector search artifacts and ANN structures."
+  },
+  "example_public_source_families": [
+    "NOAA climate and weather data",
+    "USGS earthquake and geospatial catalogs",
+    "NASA imagery metadata and Earth observation catalogs",
+    "NIH and biomedical research datasets",
+    "UN and World Bank indicators",
+    "Patent archives and innovation records",
+    "Scientific repositories and metadata indexes"
+  ],
+  "operating_rules": [
+    "Treat R:\\ as preserve-first storage, not scratch space.",
+    "Avoid deletion or major cleanup without explicit confirmation.",
+    "Prefer manifest-driven additions so future sessions inherit context.",
+    "Separate code from data unless the user explicitly wants them co-located.",
+    "Archive or snapshot before replacing important structures when practical."
+  ],
+  "strategic_value": [
+    "Reduces dependence on rate-limited or unstable APIs.",
+    "Makes local plus online synthesis possible.",
+    "Improves reproducibility and continuity across long projects.",
+    "Creates a sovereign research engine instead of a thin API client."
+  ]
+}

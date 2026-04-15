@@ -1,0 +1,203 @@
+{
+  "category": "Global_Development",
+  "apis": [
+    {
+      "name": "World Bank Open Data API",
+      "description": "Global development indicators including GDP, poverty, education, health, and infrastructure metrics.",
+      "endpoint": "https://api.worldbank.org/v2",
+      "docs": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "development",
+        "economics",
+        "global"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "UN Data API",
+      "description": "United Nations global statistics including population, trade, environment, and social indicators.",
+      "endpoint": "https://data.un.org/Handlers/DownloadHandler.ashx",
+      "docs": "https://data.un.org/Host.aspx?Content=API",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "un",
+        "global",
+        "statistics"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "UNHCR Refugee Data API",
+      "description": "Forced displacement, refugee flows, asylum statistics, and humanitarian indicators.",
+      "endpoint": "https://api.unhcr.org",
+      "docs": "https://data.unhcr.org/en/documents",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "refugees",
+        "humanitarian",
+        "migration"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "UNICEF Data API",
+      "description": "Child health, education, nutrition, and global development indicators.",
+      "endpoint": "https://data.unicef.org/resources/resource-type/api/",
+      "docs": "https://data.unicef.org",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "children",
+        "health",
+        "education"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "FAO FAOSTAT API",
+      "description": "Global agriculture, food security, land use, and production statistics.",
+      "endpoint": "https://fenixservices.fao.org/faostat/api/v1",
+      "docs": "https://www.fao.org/faostat/en/#data",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "agriculture",
+        "food",
+        "global"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ILOSTAT API",
+      "description": "International labor statistics including employment, wages, and working conditions.",
+      "endpoint": "https://www.ilo.org/sdmx/rest",
+      "docs": "https://ilostat.ilo.org/data/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "labor",
+        "employment",
+        "global"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OECD SDMX API",
+      "description": "Economic, social, and policy indicators from OECD member countries.",
+      "endpoint": "https://stats.oecd.org/SDMX-JSON",
+      "docs": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "policy",
+        "economics",
+        "international"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Eurostat API",
+      "description": "European Union statistics including economy, population, environment, and trade.",
+      "endpoint": "https://ec.europa.eu/eurostat/api/discover",
+      "docs": "https://ec.europa.eu/eurostat/web/json-and-unicode-web-services",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "eu",
+        "statistics",
+        "economics"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "WTO Data API",
+      "description": "Global trade statistics, tariffs, and international commerce indicators.",
+      "endpoint": "https://api.wto.org/timeseries/v1",
+      "docs": "https://apiportal.wto.org",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "trade",
+        "economics",
+        "global"
+      ],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

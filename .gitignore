@@ -1,0 +1,133 @@
+# ============================================================
+# R-Drive / CALI Substrate — .gitignore
+# Blueprint repo: keep architecture, source, curated knowledge.
+# Exclude runtime data, caches, secrets, and heavy mirrors.
+# ============================================================
+
+# ── OS noise ────────────────────────────────────────────────
+$RECYCLE.BIN/
+System Volume Information/
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# ── Node / Electron ─────────────────────────────────────────
+node_modules/
+dist/
+build/
+.npm/
+
+# ── Secrets / credentials ───────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+credentials.*
+tokens.json
+config.local.*
+
+# ── Databases (runtime state) ────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Runtime append logs / vault growth ──────────────────────
+*.jsonl
+*.log
+logs/
+
+# ── Runtime output capture files ────────────────────────────
+orb_stdout.txt
+orb_stderr.txt
+orb_out2.txt
+orb_err2.txt
+etest_out.txt
+etest_err.txt
+
+# ── Generated tree / scratch text files ─────────────────────
+R_tree.txt
+Orb_Assistant_Desktop_tree.txt
+apidtasets.txt
+
+# ── Audio / media generated at runtime ──────────────────────
+*.wav
+audio_cache/
+
+# ── Test result CSVs (runtime output) ───────────────────────
+cognitive_test_results_*.csv
+
+# ── Large local data mirrors ─────────────────────────────────
+datasets/bulk_mirrors/**
+!datasets/bulk_mirrors/**/.gitkeep
+api_cache/**
+!api_cache/.gitkeep
+embeddings/**
+!embeddings/.gitkeep
+indexes/**
+!indexes/.gitkeep
+vector_indexes/**
+!vector_indexes/.gitkeep
+snapshots/**
+!snapshots/.gitkeep
+tiles/**
+!tiles/.gitkeep
+maps/**
+!maps/.gitkeep
+ACP_archives/**
+!ACP_archives/.gitkeep
+
+# ── Raw chat exports (private) ───────────────────────────────
+raw/chats/**
+!raw/chats/.gitkeep
+
+# ── Cognitive seed vault JSONs (built from private chat data)
+CALI_SUBSTRATE/seeds/cognitive_seed_vault/*.json
+
+# ── ORB mesh runtime state ───────────────────────────────────
+orb_mesh/exports/**
+!orb_mesh/exports/**/.gitkeep
+orb_mesh/imports/**
+!orb_mesh/imports/**/.gitkeep
+orb_mesh/tasks/**
+!orb_mesh/tasks/**/.gitkeep
+orb_mesh/results/**
+!orb_mesh/results/**/.gitkeep
+orb_mesh/audit/**
+!orb_mesh/audit/.gitkeep
+orb_mesh/checkpoints/**
+!orb_mesh/checkpoints/.gitkeep
+orb_mesh/promoted_knowledge/**
+!orb_mesh/promoted_knowledge/.gitkeep
+
+# ── CALI System runtime state ────────────────────────────────
+Orb_Assistant_Desktop/CALI_System/memory/
+Orb_Assistant_Desktop/CALI_System/cache/
+Orb_Assistant_Desktop/CALI_System/logs/
+Orb_Assistant_Desktop/CALI_System/swarm_results/
+Orb_Assistant_Desktop/CALI_System/voice_cache/
+
+# ── Vault system runtime data ────────────────────────────────
+vault_system/posteriori/
+Orb_Assistant_Desktop/vault_system/
+
+# ── GOAT substrate runtime state ─────────────────────────────
+goat_substrate/cognitive_memory.db
+goat_substrate/vault/
+goat_substrate/telemetry/
+
+# ── Swarm runtime state ──────────────────────────────────────
+Orb_Assistant_Desktop/swarm/substrate.db
+
+# Claude Code local settings
+.claude/
+
+# VSCode workspace (optional — remove if you want to share)
+.vscode/

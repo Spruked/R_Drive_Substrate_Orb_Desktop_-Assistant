@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "name": "advanced_categories_registry",
+  "updated_on": "2026-03-16",
+  "purpose": "Define the high-value research domains CALI can mirror, index, and cross-reference on R:\\.",
+  "categories": [
+    {
+      "id": "machine_learning_and_ai",
+      "label": "Machine Learning and AI",
+      "priority": "high",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\machine_learning",
+      "core_uses": ["literature review", "model comparison", "benchmark mapping"]
+    },
+    {
+      "id": "earth_systems_and_climate",
+      "label": "Earth Systems and Climate",
+      "priority": "high",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\earth_systems_and_climate",
+      "core_uses": ["climate baselines", "weather correlation", "environmental trend analysis"]
+    },
+    {
+      "id": "geospatial_and_cartography",
+      "label": "Geospatial and Cartography",
+      "priority": "high",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\geospatial_and_cartography",
+      "core_uses": ["tiles", "layers", "place intelligence"]
+    },
+    {
+      "id": "economics_and_development",
+      "label": "Economics and Development",
+      "priority": "high",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\economics_and_development",
+      "core_uses": ["indicator analysis", "macro comparison", "regional tracking"]
+    },
+    {
+      "id": "biomedical_and_public_health",
+      "label": "Biomedical and Public Health",
+      "priority": "high",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\biomedical_and_public_health",
+      "core_uses": ["research synthesis", "public health trend review", "biomedical metadata search"]
+    },
+    {
+      "id": "patents_and_innovation",
+      "label": "Patents and Innovation",
+      "priority": "high",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\patents_and_innovation",
+      "core_uses": ["prior art search", "innovation mapping", "classification crosswalks"]
+    },
+    {
+      "id": "energy_and_infrastructure",
+      "label": "Energy and Infrastructure",
+      "priority": "medium",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\energy_and_infrastructure",
+      "core_uses": ["grid analysis", "infrastructure comparison", "asset mapping"]
+    },
+    {
+      "id": "agriculture_food_and_water",
+      "label": "Agriculture, Food, and Water",
+      "priority": "medium",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\agriculture_food_and_water",
+      "core_uses": ["resource tracking", "yield comparison", "water system analysis"]
+    },
+    {
+      "id": "mobility_and_transport",
+      "label": "Mobility and Transport",
+      "priority": "medium",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\mobility_and_transport",
+      "core_uses": ["network mapping", "movement analysis", "routing context"]
+    },
+    {
+      "id": "law_policy_and_regulation",
+      "label": "Law, Policy, and Regulation",
+      "priority": "medium",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\law_policy_and_regulation",
+      "core_uses": ["regulatory comparison", "policy tracking", "compliance context"]
+    },
+    {
+      "id": "demographics_and_social_systems",
+      "label": "Demographics and Social Systems",
+      "priority": "medium",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\demographics_and_social_systems",
+      "core_uses": ["population analysis", "social indicator tracking", "regional comparison"]
+    },
+    {
+      "id": "astronomy_and_space_observation",
+      "label": "Astronomy and Space Observation",
+      "priority": "medium",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\astronomy_and_space_observation",
+      "core_uses": ["catalog search", "imagery metadata", "observation cross-reference"]
+    }
+  ],
+  "registry_rules": [
+    "Each category should eventually receive a source manifest and storage convention.",
+    "High-priority categories should get embeddings, indexes, and snapshot policies first.",
+    "Prefer categories that support cross-domain synthesis instead of narrow one-off imports.",
+    "Keep storage hints stable so future sessions can automate around them."
+  ],
+  "next_actions": [
+    "Create per-category source manifests for the highest-priority groups.",
+    "Add directory scaffolding only when the user wants actual data staging to begin.",
+    "Cross-link category ids with machine_learning.json and future source registries."
+  ]
+}

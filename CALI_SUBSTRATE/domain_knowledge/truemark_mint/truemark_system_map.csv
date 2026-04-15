@@ -1,0 +1,6 @@
+id,name,sequence,description,unit,category,owns,depends_on,orb_visibility,implications,edge_case_handling
+truemark,TrueMark Mint,10,Primary asset issuance system,None,System,All external branding and customer-facing assets,CertSig + GOAT + CALI,full,"Maintains brand coherence and enterprise positioning","Brand inversion attempt auto-rejected by substrate"
+certsig,Certification Engine,20,Underlying validation and certificate system,None,System,All certification layers and cryptographic proofs,None,hidden,"Provides immutable trust layer","Engine offline requires graceful degradation to cached validation"
+goat,GOAT Preservation System,30,Content preparation and structuring engine,None,System,Raw content -> structured assets,TrueMark,hidden,"Ensures high-quality input","Poor source material triggers quality scoring and rejection"
+cali,CALI Core,40,Knowledge authority and reasoning system,None,System,Ontology & cross-linking,All above,"full (reasoning only)","Drives intelligent behavior across Orbs","Reasoning conflict requires human-in-loop escalation"
+orb,Orb Interface,50,User interaction and visualization layer,None,System,All user-facing interactions,CALI + TrueMark,full,"Delivers consistent experience","Orb-specific branding override strictly prohibited"

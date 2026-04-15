@@ -1,0 +1,230 @@
+{
+  "category": "Economics_Finance",
+  "apis": [
+    {
+      "name": "Federal Reserve FRED API",
+      "description": "Economic indicators including GDP, CPI, interest rates, and financial time series.",
+      "endpoint": "https://api.stlouisfed.org/fred",
+      "docs": "https://fred.stlouisfed.org/docs/api/fred/",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "economics",
+        "macro",
+        "indicators"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "World Bank Open Data API",
+      "description": "Global development indicators including GDP, poverty, education, and health metrics.",
+      "endpoint": "https://api.worldbank.org/v2",
+      "docs": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "global",
+        "development",
+        "economics"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "IMF Data API",
+      "description": "International Monetary Fund economic indicators and financial statistics.",
+      "endpoint": "https://dataservices.imf.org/REST/SDMX_JSON.svc",
+      "docs": "https://datahelp.imf.org/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "global",
+        "macro",
+        "finance"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OECD Data API",
+      "description": "Economic, social, and policy indicators from OECD member countries.",
+      "endpoint": "https://stats.oecd.org/SDMX-JSON",
+      "docs": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "economics",
+        "policy",
+        "international"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "SEC EDGAR API",
+      "description": "Corporate filings, financial statements, and disclosures from the SEC.",
+      "endpoint": "https://data.sec.gov/api",
+      "docs": "https://www.sec.gov/edgar/sec-api-documentation",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "corporate",
+        "regulatory",
+        "filings"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "Yahoo Finance Unofficial API",
+      "description": "Market data, stock quotes, and financial metrics (unofficial endpoints).",
+      "endpoint": "https://query1.finance.yahoo.com",
+      "docs": "https://query1.finance.yahoo.com",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "stocks",
+        "markets",
+        "pricing"
+      ],
+      "reliability_score": 85,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "CoinGecko API",
+      "description": "Cryptocurrency prices, market data, and exchange information.",
+      "endpoint": "https://api.coingecko.com/api/v3",
+      "docs": "https://www.coingecko.com/en/api",
+      "auth": "none",
+      "rate_limit": "strict",
+      "tags": [
+        "crypto",
+        "markets",
+        "pricing"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "CoinMarketCap API",
+      "description": "Cryptocurrency market capitalization, rankings, and pricing.",
+      "endpoint": "https://pro-api.coinmarketcap.com/v1",
+      "docs": "https://coinmarketcap.com/api/",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "crypto",
+        "markets",
+        "capitalization"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "Open Exchange Rates API",
+      "description": "Foreign exchange rates and currency conversion.",
+      "endpoint": "https://openexchangerates.org/api",
+      "docs": "https://docs.openexchangerates.org/",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "forex",
+        "currency",
+        "exchange_rates"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Treasury Yield Curve API",
+      "description": "Daily U.S. Treasury yield curve rates.",
+      "endpoint": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1",
+      "docs": "https://fiscaldata.treasury.gov/api-documentation/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "bonds",
+        "treasury",
+        "interest_rates"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

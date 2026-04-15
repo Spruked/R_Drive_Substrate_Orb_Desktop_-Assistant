@@ -1,0 +1,145 @@
+{
+  "category": "Advanced_Health",
+  "apis": [
+    {
+      "name": "WHO Global Health Observatory (Advanced)",
+      "description": "Expanded WHO datasets including mortality, disease burden, health systems, and risk factors.",
+      "endpoint": "https://ghoapi.azureedge.net/api",
+      "docs": "https://www.who.int/data/gho/info/gho-odata-api",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["who", "global_health", "epidemiology"],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "IHME Global Burden of Disease (GBD)",
+      "description": "Disease burden, risk factors, mortality, and health metrics across 200+ countries.",
+      "endpoint": "http://ghdx.healthdata.org",
+      "docs": "http://ghdx.healthdata.org",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["gbd", "epidemiology", "global"],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "CDC WONDER API",
+      "description": "Mortality, natality, cancer, environmental health, and public health datasets.",
+      "endpoint": "https://wonder.cdc.gov",
+      "docs": "https://wonder.cdc.gov/wonder/help/WONDER-API.html",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["mortality", "cdc", "public_health"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "CDC NNDSS (Notifiable Diseases)",
+      "description": "Weekly and annual notifiable disease surveillance data.",
+      "endpoint": "https://data.cdc.gov/resource",
+      "docs": "https://data.cdc.gov/browse?category=NNDSS",
+      "auth": "app_token_optional",
+      "rate_limit": "moderate",
+      "tags": ["surveillance", "infectious_disease", "cdc"],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "Nextstrain Pathogen Genomics",
+      "description": "Genomic epidemiology datasets for viruses, bacteria, and emerging pathogens.",
+      "endpoint": "https://nextstrain.org",
+      "docs": "https://docs.nextstrain.org",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["genomics", "pathogens", "epidemiology"],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "GISAID Public Metadata (non-sequence)",
+      "description": "Publicly accessible metadata for global pathogen surveillance (no sequences).",
+      "endpoint": "https://gisaid.org",
+      "docs": "https://gisaid.org",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["pathogens", "surveillance", "global"],
+      "reliability_score": 85,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "NCBI Virus API",
+      "description": "Viral genomes, metadata, and pathogen surveillance datasets.",
+      "endpoint": "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/virus",
+      "docs": "https://www.ncbi.nlm.nih.gov/datasets/docs/v2/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["virus", "genomics", "bioinformatics"],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "NCBI Pathogen Detection",
+      "description": "Bacterial pathogen genomics, AMR profiles, and outbreak clusters.",
+      "endpoint": "https://www.ncbi.nlm.nih.gov/pathogens/api",
+      "docs": "https://www.ncbi.nlm.nih.gov/pathogens",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["amr", "bacteria", "genomics"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "OpenFDA Adverse Events (Advanced)",
+      "description": "Drug, device, and biologic adverse event surveillance with expanded fields.",
+      "endpoint": "https://api.fda.gov",
+      "docs": "https://open.fda.gov/apis/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["pharmacovigilance", "safety", "fda"],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "Global AMR Surveillance (GLASS)",
+      "description": "WHO antimicrobial resistance surveillance datasets.",
+      "endpoint": "https://amrhub.who.int",
+      "docs": "https://www.who.int/initiatives/glass",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["amr", "who", "surveillance"],
+      "reliability_score": 87,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    }
+  ]
+}

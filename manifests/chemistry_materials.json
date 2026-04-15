@@ -1,0 +1,142 @@
+{
+  "category": "Chemistry_Materials",
+  "apis": [
+    {
+      "name": "PubChem PUG REST",
+      "description": "Chemical structures, properties, bioassays, and compound metadata from the PubChem database.",
+      "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+      "docs": "https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "chemistry",
+        "compounds",
+        "bioassays",
+        "materials"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "ChemSpider API",
+      "description": "Chemical structure search, properties, and spectral data from the Royal Society of Chemistry.",
+      "endpoint": "https://api.rsc.org/compounds/v1",
+      "docs": "http://www.chemspider.com/AboutServices.aspx",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "chemistry",
+        "structures",
+        "spectra"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "Materials Project API",
+      "description": "Computed materials properties including crystal structures, band gaps, and formation energies.",
+      "endpoint": "https://api.materialsproject.org",
+      "docs": "https://docs.materialsproject.org/",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "materials",
+        "crystals",
+        "physics"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "NIST Chemistry WebBook",
+      "description": "Thermochemical, thermophysical, and spectral data for chemical species.",
+      "endpoint": "https://webbook.nist.gov/cgi/cbook.cgi",
+      "docs": "https://webbook.nist.gov/chemistry/",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "chemistry",
+        "thermodynamics",
+        "spectroscopy"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ChEMBL API",
+      "description": "Bioactive molecules, drug discovery data, and compound-target relationships.",
+      "endpoint": "https://www.ebi.ac.uk/chembl/api/data",
+      "docs": "https://chembl.gitbook.io/chembl-interface-documentation/web-services",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "drug_discovery",
+        "bioactivity",
+        "chemistry"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "PDB RCSB API",
+      "description": "Protein structures, macromolecular assemblies, and crystallography data.",
+      "endpoint": "https://data.rcsb.org/rest/v1",
+      "docs": "https://data.rcsb.org/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "proteins",
+        "structures",
+        "biochemistry"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    }
+  ]
+}

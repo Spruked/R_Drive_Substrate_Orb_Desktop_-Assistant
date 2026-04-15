@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0",
+  "name": "CALI Research API Manifest",
+  "updated_on": "2026-04-12",
+  "drive_root": "R:\\",
+  "notes": {
+    "tesla_public_data": "Tesla does not provide a general public developer API for unrestricted research ingestion. The Tesla Fleet API is partner-scoped and owner-authorized; CALI should treat Tesla telemetry as non-public and fall back to public press, filings, or linked SpaceX/Starlink sources where appropriate."
+  },
+  "apis": [
+    {
+      "id": "nasa_eonet_events",
+      "name": "NASA EONET Events",
+      "provider": "NASA",
+      "category": "earth_systems_and_climate",
+      "domain": "climate",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\earth_systems_and_climate",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Wildfire, storm, drought, and earth observation event monitoring",
+      "notes": "Official public Earth Observatory event feed",
+      "endpoints": {
+        "events": "https://eonet.gsfc.nasa.gov/api/v3/events",
+        "categories": "https://eonet.gsfc.nasa.gov/api/v3/categories"
+      }
+    },
+    {
+      "id": "nasa_firms_area",
+      "name": "NASA FIRMS Area API",
+      "provider": "NASA_FIRMS",
+      "category": "earth_systems_and_climate",
+      "domain": "climate",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\earth_systems_and_climate",
+      "priority": "high",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Wildfire thermal anomaly and smoke-adjacent research",
+      "notes": "Official FIRMS area API requires a MAP_KEY and should be mirrored when available",
+      "endpoints": {
+        "area_csv_template": "https://firms.modaps.eosdis.nasa.gov/api/area/csv/{API_KEY}/world/1/2026-01-01"
+      }
+    },
+    {
+      "id": "noaa_cdo_v2",
+      "name": "NOAA Climate Data Online v2",
+      "provider": "NOAA",
+      "category": "earth_systems_and_climate",
+      "domain": "climate",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\earth_systems_and_climate",
+      "priority": "high",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Station, daily summary, and climate-normal retrieval",
+      "notes": "Official NOAA NCEI CDO API",
+      "endpoints": {
+        "stations": "https://www.ncei.noaa.gov/cdo-web/api/v2/stations",
+        "datasets": "https://www.ncei.noaa.gov/cdo-web/api/v2/datasets"
+      }
+    },
+    {
+      "id": "airnow_observations",
+      "name": "AirNow AQI Observations",
+      "provider": "AIRNOW",
+      "category": "earth_systems_and_climate",
+      "domain": "climate",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\earth_systems_and_climate",
+      "priority": "high",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Current AQI and pollutant conditions by coordinates",
+      "notes": "Official AirNow API endpoint template",
+      "endpoints": {
+        "latlong_current_template": "https://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=39.0997&longitude=-94.5786&distance=25&API_KEY={API_KEY}"
+      }
+    },
+    {
+      "id": "usda_nass_quickstats",
+      "name": "USDA NASS Quick Stats",
+      "provider": "USDA_NASS",
+      "category": "agriculture_food_and_water",
+      "domain": "economics",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\agriculture_food_and_water",
+      "priority": "high",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Crop yield, acreage, production, and survey retrieval",
+      "notes": "Official USDA NASS Quick Stats API template",
+      "endpoints": {
+        "quickstats_template": "https://quickstats.nass.usda.gov/api/api_GET/?key={API_KEY}&commodity_desc=CORN&year__GE=2020&format=JSON"
+      }
+    },
+    {
+      "id": "usgs_water_services",
+      "name": "USGS Water Services",
+      "provider": "USGS",
+      "category": "agriculture_food_and_water",
+      "domain": "geospatial",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\agriculture_food_and_water",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Surface water and streamflow context for agriculture and drought analysis",
+      "notes": "Official USGS NWIS JSON services",
+      "endpoints": {
+        "instant_values": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06893000&parameterCd=00060,00065",
+        "daily_values": "https://waterservices.usgs.gov/nwis/dv/?format=json&sites=06893000&parameterCd=00060,00065"
+      }
+    },
+    {
+      "id": "cdc_resp_lens",
+      "name": "CDC RESP-LENS",
+      "provider": "CDC",
+      "category": "biomedical_and_public_health",
+      "domain": "biomedical",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\biomedical_and_public_health",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Respiratory illness trends and surveillance monitoring",
+      "notes": "Public CDC Socrata dataset endpoint",
+      "endpoints": {
+        "dataset": "https://data.cdc.gov/resource/ch5i-63ve.json"
+      }
+    },
+    {
+      "id": "cdc_places",
+      "name": "CDC PLACES",
+      "provider": "CDC",
+      "category": "biomedical_and_public_health",
+      "domain": "biomedical",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\biomedical_and_public_health",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Local health prevalence and condition indicators",
+      "notes": "Public CDC PLACES Socrata dataset endpoint",
+      "endpoints": {
+        "place_data": "https://data.cdc.gov/resource/vgc8-iyc4.json"
+      }
+    },
+    {
+      "id": "fred_series_observations",
+      "name": "FRED Series Observations",
+      "provider": "FRED",
+      "category": "financial_economic",
+      "domain": "finance",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\financial_economic",
+      "priority": "high",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Macro-financial series retrieval including GDP, rates, and labor indicators",
+      "notes": "Official FRED API endpoint template",
+      "endpoints": {
+        "gdp_template": "https://api.stlouisfed.org/fred/series/observations?series_id=GDP&api_key={API_KEY}&file_type=json",
+        "fedfunds_template": "https://api.stlouisfed.org/fred/series/observations?series_id=FEDFUNDS&api_key={API_KEY}&file_type=json"
+      }
+    },
+    {
+      "id": "sec_edgar_submissions",
+      "name": "SEC EDGAR Submissions and Company Facts",
+      "provider": "SEC",
+      "category": "financial_economic",
+      "domain": "finance",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\financial_economic",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "provider governed",
+      "use_case": "Company filings, submission history, and XBRL facts",
+      "notes": "Official SEC EDGAR public data endpoints",
+      "endpoints": {
+        "apple_submissions": "https://data.sec.gov/submissions/CIK0000320193.json",
+        "apple_companyfacts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json"
+      }
+    },
+    {
+      "id": "bea_api",
+      "name": "BEA Data API",
+      "provider": "BEA",
+      "category": "macro_economic_indicators",
+      "domain": "economics",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\macro_economic_indicators",
+      "priority": "high",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "National income, GDP by industry, and macro tables",
+      "notes": "Official BEA API template",
+      "endpoints": {
+        "nipa_template": "https://apps.bea.gov/api/data?UserID={API_KEY}&datasetname=NIPA&TableName=T10101&Frequency=Q&Year=2025&ResultFormat=json"
+      }
+    },
+    {
+      "id": "world_bank_indicators",
+      "name": "World Bank Indicators API",
+      "provider": "WORLD_BANK",
+      "category": "macro_economic_indicators",
+      "domain": "economics",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\macro_economic_indicators",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Country and global macro indicator retrieval",
+      "notes": "Official World Bank v2 indicators API",
+      "endpoints": {
+        "gdp_indicator": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.KD?format=json"
+      }
+    },
+    {
+      "id": "bls_public_api",
+      "name": "BLS Public Data API",
+      "provider": "BLS",
+      "category": "industrial_manufacturing",
+      "domain": "economics",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\industrial_manufacturing",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Labor, producer price, and industrial-related time-series retrieval",
+      "notes": "Official BLS public API example endpoint",
+      "endpoints": {
+        "series_template": "https://api.bls.gov/publicAPI/v2/timeseries/data/PCUOMFGOMFG--"
+      }
+    },
+    {
+      "id": "census_acs_api",
+      "name": "US Census ACS API",
+      "provider": "CENSUS",
+      "category": "micro_economic_markets",
+      "domain": "economics",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\micro_economic_markets",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Regional demographic and household metrics for market analysis",
+      "notes": "Official Census API example endpoint",
+      "endpoints": {
+        "state_population": "https://api.census.gov/data/2023/acs/acs5?get=NAME,B01001_001E&for=state:*"
+      }
+    },
+    {
+      "id": "regulations_gov_api",
+      "name": "Regulations.gov API",
+      "provider": "REGULATIONS_GOV",
+      "category": "legal_and_regulatory",
+      "domain": "general",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\legal_and_regulatory",
+      "priority": "medium",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Rulemaking, comments, and federal regulatory document retrieval",
+      "notes": "Official Regulations.gov API endpoint",
+      "endpoints": {
+        "documents": "https://api.regulations.gov/v4/documents"
+      }
+    },
+    {
+      "id": "congress_gov_api",
+      "name": "Congress.gov API",
+      "provider": "CONGRESS_GOV",
+      "category": "legal_and_regulatory",
+      "domain": "general",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\legal_and_regulatory",
+      "priority": "medium",
+      "auth": "api_key_required",
+      "rate_limit": "provider governed",
+      "use_case": "Bill, committee, and policy text retrieval",
+      "notes": "Official Congress.gov API endpoint",
+      "endpoints": {
+        "bill_search": "https://api.congress.gov/v3/bill"
+      }
+    },
+    {
+      "id": "usgs_earthquake_feed",
+      "name": "USGS Earthquake Feeds",
+      "provider": "USGS",
+      "category": "geospatial_and_regional_analysis",
+      "domain": "geospatial",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\geospatial_and_regional_analysis",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Hazard and regional geospatial event monitoring",
+      "notes": "Official USGS GeoJSON feed",
+      "endpoints": {
+        "all_day": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+      }
+    },
+    {
+      "id": "census_geocoder",
+      "name": "US Census Geocoder",
+      "provider": "CENSUS",
+      "category": "geospatial_and_regional_analysis",
+      "domain": "geospatial",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\geospatial_and_regional_analysis",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Coordinate-to-geography resolution for regional joins",
+      "notes": "Official Census geocoder example endpoint",
+      "endpoints": {
+        "kc_coordinates": "https://geocoding.geo.census.gov/geocoder/geographies/coordinates?x=-94.5786&y=39.0997&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      }
+    },
+    {
+      "id": "spacex_public_api_v5",
+      "name": "SpaceX Public API v5",
+      "provider": "SPACEX_PUBLIC",
+      "category": "space_exploration_and_mars",
+      "domain": "space",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\space_exploration_and_mars",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "community governed",
+      "use_case": "Launch tracking, Starship progress, Starlink context, and company metadata",
+      "notes": "Public and widely used but community-maintained rather than an official SpaceX developer product",
+      "endpoints": {
+        "launches_latest": "https://api.spacexdata.com/v5/launches/latest",
+        "launches_upcoming": "https://api.spacexdata.com/v5/launches/upcoming",
+        "rockets": "https://api.spacexdata.com/v5/rockets",
+        "starlink": "https://api.spacexdata.com/v5/starlink",
+        "company": "https://api.spacexdata.com/v5/company"
+      }
+    },
+    {
+      "id": "nasa_mars_rover_photos",
+      "name": "NASA Mars Rover Photos API",
+      "provider": "NASA",
+      "category": "space_exploration_and_mars",
+      "domain": "space",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\space_exploration_and_mars",
+      "priority": "high",
+      "auth": "optional_key",
+      "rate_limit": "demo key limited",
+      "use_case": "Mars rover imagery retrieval for Perseverance and Curiosity",
+      "notes": "Public NASA API; demo key included for low-volume access and should be replaced for sustained ingestion",
+      "endpoints": {
+        "perseverance_sol_1000": "https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?sol=1000&api_key=DEMO_KEY",
+        "curiosity_latest": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=DEMO_KEY"
+      }
+    },
+    {
+      "id": "launch_library_2",
+      "name": "Launch Library 2",
+      "provider": "THE_SPACE_DEVS",
+      "category": "space_exploration_and_mars",
+      "domain": "space",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\space_exploration_and_mars",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Fallback and complement for global launch tracking including SpaceX",
+      "notes": "Public API by The Space Devs",
+      "endpoints": {
+        "upcoming_spacex": "https://ll.thespacedevs.com/2.3.0/launch/upcoming/?search=SpaceX",
+        "launch_list": "https://ll.thespacedevs.com/2.3.0/launch/?mode=list"
+      }
+    },
+    {
+      "id": "celestrak_gp_tle",
+      "name": "Celestrak GP/TLE Data",
+      "provider": "CELESTRAK",
+      "category": "space_exploration_and_mars",
+      "domain": "space",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\space_exploration_and_mars",
+      "priority": "high",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Orbital elements for Starlink, active satellites, and mission support tracking",
+      "notes": "Official public Celestrak GP endpoint",
+      "endpoints": {
+        "starlink": "https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=json",
+        "active": "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=json"
+      }
+    },
+    {
+      "id": "open_notify_iss",
+      "name": "Open Notify",
+      "provider": "OPEN_NOTIFY",
+      "category": "space_exploration_and_mars",
+      "domain": "space",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\space_exploration_and_mars",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "ISS position and people-in-space context",
+      "notes": "Public community service suitable for lightweight contextual enrichment",
+      "endpoints": {
+        "iss_now": "http://api.open-notify.org/iss-now.json",
+        "astros": "http://api.open-notify.org/astros.json"
+      }
+    },
+    {
+      "id": "pubmed_eutils",
+      "name": "PubMed E-utilities",
+      "provider": "NCBI",
+      "category": "scientific_literature_and_evidence",
+      "domain": "biomedical",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\scientific_literature_and_evidence",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Biomedical literature search and evidence retrieval",
+      "notes": "Official NCBI E-utilities endpoints",
+      "endpoints": {
+        "esearch_template": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&term={query}",
+        "esummary_template": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=31452104"
+      }
+    },
+    {
+      "id": "crossref_works",
+      "name": "Crossref REST API",
+      "provider": "CROSSREF",
+      "category": "scientific_literature_and_evidence",
+      "domain": "academic",
+      "storage_hint": "R:\\datasets\\bulk_mirrors\\scientific_literature_and_evidence",
+      "priority": "medium",
+      "auth": "none",
+      "rate_limit": "public",
+      "use_case": "Citation metadata, DOI lookup, and publication graph enrichment",
+      "notes": "Public Crossref works API",
+      "endpoints": {
+        "works_query_template": "https://api.crossref.org/works?query={query}",
+        "work_example": "https://api.crossref.org/works/10.1038/nature12373"
+      }
+    }
+  ]
+}

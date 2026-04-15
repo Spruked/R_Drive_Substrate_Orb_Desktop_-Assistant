@@ -1,0 +1,251 @@
+{
+  "category": "US_Government",
+  "apis": [
+    {
+      "name": "US Census Bureau API",
+      "description": "Demographic, economic, and geographic data from the U.S. Census Bureau.",
+      "endpoint": "https://api.census.gov/data",
+      "docs": "https://www.census.gov/data/developers/data-sets.html",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "demographics",
+        "population",
+        "economics"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "SEC EDGAR API",
+      "description": "Corporate filings, financial statements, and disclosures from the SEC.",
+      "endpoint": "https://data.sec.gov/api",
+      "docs": "https://www.sec.gov/edgar/sec-api-documentation",
+      "auth": "api_key",
+      "rate_limit": "strict; user-agent required",
+      "tags": [
+        "finance",
+        "corporate",
+        "regulatory"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "FBI Crime Data API",
+      "description": "National crime statistics including violent crime, property crime, and trends.",
+      "endpoint": "https://api.usa.gov/crime/fbi/sapi",
+      "docs": "https://crime-data-explorer.fr.cloud.gov/pages/docApi",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "crime",
+        "law_enforcement",
+        "statistics"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Bureau of Labor Statistics API",
+      "description": "Employment, wages, inflation, and labor market statistics.",
+      "endpoint": "https://api.bls.gov/publicAPI/v2",
+      "docs": "https://www.bls.gov/developers/",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "labor",
+        "economics",
+        "inflation"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Federal Reserve FRED API",
+      "description": "Economic indicators including GDP, CPI, interest rates, and financial data.",
+      "endpoint": "https://api.stlouisfed.org/fred",
+      "docs": "https://fred.stlouisfed.org/docs/api/fred/",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "economics",
+        "finance",
+        "indicators"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "USA Spending API",
+      "description": "Federal spending, contracts, grants, and award data.",
+      "endpoint": "https://api.usaspending.gov/api/v2",
+      "docs": "https://api.usaspending.gov/docs/endpoints",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "spending",
+        "government",
+        "finance"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Data.gov Catalog API",
+      "description": "Search and access metadata for thousands of U.S. government datasets.",
+      "endpoint": "https://catalog.data.gov/api/3",
+      "docs": "https://resources.data.gov/",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "open_data",
+        "catalog",
+        "metadata"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "EPA EnviroFacts",
+      "description": "Environmental data including air quality, water quality, and toxic releases.",
+      "endpoint": "https://enviro.epa.gov/enviro/efservice",
+      "docs": "https://www.epa.gov/enviro/envirofacts-data-service-api",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "environment",
+        "pollution",
+        "epa"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "EPA Air Quality System",
+      "description": "Air quality monitoring data including pollutants and sensor readings.",
+      "endpoint": "https://aqs.epa.gov/aqsweb/documents/data_api.html",
+      "docs": "https://aqs.epa.gov/aqsweb/documents/data_api.html",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "air_quality",
+        "environment",
+        "pollution"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "USGS Earthquake Hazards",
+      "description": "Earthquake event data including magnitude, depth, and location.",
+      "endpoint": "https://earthquake.usgs.gov/fdsnws/event/1",
+      "docs": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "earthquakes",
+        "geology",
+        "hazards"
+      ],
+      "reliability_score": 99,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "USGS Water Services",
+      "description": "Real-time and historical water data including streamflow and groundwater.",
+      "endpoint": "https://waterservices.usgs.gov",
+      "docs": "https://waterservices.usgs.gov/docs/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "water",
+        "hydrology",
+        "environment"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

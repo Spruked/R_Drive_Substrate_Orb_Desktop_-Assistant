@@ -1,0 +1,234 @@
+{
+  "category": "NASA",
+  "apis": [
+    {
+      "name": "NASA APOD",
+      "description": "Astronomy Picture of the Day with image, metadata, and explanation.",
+      "endpoint": "https://api.nasa.gov/planetary/apod",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "space",
+        "imagery",
+        "education"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NASA NeoWS",
+      "description": "Near Earth Object Web Service for asteroid and impact risk data.",
+      "endpoint": "https://api.nasa.gov/neo/rest/v1",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "asteroids",
+        "risk",
+        "space"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NASA EONET",
+      "description": "Earth Observatory Natural Event Tracker for global natural events.",
+      "endpoint": "https://eonet.gsfc.nasa.gov/api/v3",
+      "docs": "https://eonet.gsfc.nasa.gov/docs/v3",
+      "auth": "none",
+      "rate_limit": "unspecified; treat as moderate",
+      "tags": [
+        "earth",
+        "events",
+        "disasters"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "NASA Earth Assets",
+      "description": "Retrieve metadata for Earth imagery assets by location and date.",
+      "endpoint": "https://api.nasa.gov/planetary/earth/assets",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "earth",
+        "imagery",
+        "satellite"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NASA Earth Imagery",
+      "description": "Retrieve satellite imagery for a given location and date.",
+      "endpoint": "https://api.nasa.gov/planetary/earth/imagery",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "earth",
+        "imagery",
+        "satellite"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NASA DONKI",
+      "description": "Space weather alerts, solar flares, CMEs, and geomagnetic storm data.",
+      "endpoint": "https://api.nasa.gov/DONKI",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "space_weather",
+        "solar",
+        "geomagnetic"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "NASA Mars Rover Photos",
+      "description": "Mars rover mission photos with metadata and camera details.",
+      "endpoint": "https://api.nasa.gov/mars-photos/api/v1/rovers",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "mars",
+        "imagery",
+        "rovers"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NASA TechTransfer",
+      "description": "NASA patents, software, and technology transfer datasets.",
+      "endpoint": "https://api.nasa.gov/techtransfer",
+      "docs": "https://api.nasa.gov/",
+      "auth": "api_key",
+      "rate_limit": "per-key; moderate",
+      "tags": [
+        "technology",
+        "patents",
+        "innovation"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NASA GeneLab",
+      "description": "Genomics and biological experiment data from spaceflight missions.",
+      "endpoint": "https://genelab-data.ndc.nasa.gov/genelab/data",
+      "docs": "https://genelab-data.ndc.nasa.gov/",
+      "auth": "none",
+      "rate_limit": "unspecified; moderate",
+      "tags": [
+        "genomics",
+        "biology",
+        "space"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NASA Satellite Situation Center",
+      "description": "Satellite orbit and magnetosphere data from SSCWeb.",
+      "endpoint": "https://sscweb.gsfc.nasa.gov/WS/ssc",
+      "docs": "https://sscweb.gsfc.nasa.gov/",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "satellites",
+        "orbits",
+        "magnetosphere"
+      ],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

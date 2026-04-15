@@ -1,0 +1,229 @@
+{
+  "category": "Geospatial",
+  "apis": [
+    {
+      "name": "OpenStreetMap Nominatim",
+      "description": "Geocoding and reverse geocoding using OpenStreetMap data.",
+      "endpoint": "https://nominatim.openstreetmap.org",
+      "docs": "https://nominatim.org/release-docs/latest/api/Overview/",
+      "auth": "none",
+      "rate_limit": "strict; 1 request per second",
+      "tags": [
+        "geocoding",
+        "reverse_geocoding",
+        "osm"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "OpenStreetMap Overpass API",
+      "description": "Query OSM map features using Overpass QL.",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "docs": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "osm",
+        "map_features",
+        "geodata"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "USGS National Map API",
+      "description": "Topographic maps, elevation, hydrography, and land cover data.",
+      "endpoint": "https://tnmaccess.nationalmap.gov/api/v1",
+      "docs": "https://apps.nationalmap.gov/tnmaccess/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "elevation",
+        "topography",
+        "usgs"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "USGS Elevation Point Query Service",
+      "description": "Elevation data for any coordinate in the United States.",
+      "endpoint": "https://nationalmap.gov/epqs/pqs.php",
+      "docs": "https://nationalmap.gov/epqs/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "elevation",
+        "terrain",
+        "usgs"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OpenTopoMap Tiles",
+      "description": "Topographic map tiles generated from OSM and SRTM data.",
+      "endpoint": "https://tile.opentopomap.org/{z}/{x}/{y}.png",
+      "docs": "https://opentopomap.org/about",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "tiles",
+        "topography",
+        "maps"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OpenWeatherMap Geocoding",
+      "description": "City name, ZIP code, and coordinate geocoding.",
+      "endpoint": "https://api.openweathermap.org/geo/1.0",
+      "docs": "https://openweathermap.org/api/geocoding-api",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "geocoding",
+        "weather",
+        "coordinates"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "GeoNames API",
+      "description": "Global place names, elevation, time zones, and postal codes.",
+      "endpoint": "http://api.geonames.org",
+      "docs": "https://www.geonames.org/export/web-services.html",
+      "auth": "username",
+      "rate_limit": "moderate",
+      "tags": [
+        "places",
+        "geocoding",
+        "global"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Mapbox Geocoding API",
+      "description": "High-quality geocoding, reverse geocoding, and place search.",
+      "endpoint": "https://api.mapbox.com/geocoding/v5",
+      "docs": "https://docs.mapbox.com/api/search/geocoding/",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "geocoding",
+        "maps",
+        "commercial"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "Mapbox Static Tiles",
+      "description": "Static map tiles for rendering maps and overlays.",
+      "endpoint": "https://api.mapbox.com/styles/v1/{style}/tiles/{z}/{x}/{y}",
+      "docs": "https://docs.mapbox.com/api/maps/static-tiles/",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "tiles",
+        "maps",
+        "rendering"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OpenRouteService",
+      "description": "Routing, isochrones, and geospatial analysis tools.",
+      "endpoint": "https://api.openrouteservice.org",
+      "docs": "https://openrouteservice.org/dev/#/api-docs",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "routing",
+        "isochrones",
+        "navigation"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    }
+  ]
+}

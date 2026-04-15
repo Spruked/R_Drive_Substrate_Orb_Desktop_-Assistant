@@ -1,0 +1,227 @@
+{
+  "category": "NOAA",
+  "apis": [
+    {
+      "name": "NOAA Weather Alerts",
+      "description": "Real-time severe weather alerts including tornado, flood, storm, and emergency notifications.",
+      "endpoint": "https://api.weather.gov/alerts",
+      "docs": "https://www.weather.gov/documentation/services-web-api",
+      "auth": "none",
+      "rate_limit": "moderate; public API",
+      "tags": [
+        "weather",
+        "alerts",
+        "emergency"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Forecast Gridpoints",
+      "description": "7-day and hourly forecasts for any location using gridpoint data.",
+      "endpoint": "https://api.weather.gov/gridpoints",
+      "docs": "https://www.weather.gov/documentation/services-web-api",
+      "auth": "none",
+      "rate_limit": "moderate; public API",
+      "tags": [
+        "weather",
+        "forecast",
+        "gridpoints"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Radar Stations",
+      "description": "Metadata and status for NOAA radar stations across the United States.",
+      "endpoint": "https://api.weather.gov/radar/stations",
+      "docs": "https://www.weather.gov/documentation/services-web-api",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "weather",
+        "radar",
+        "infrastructure"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Tides and Currents",
+      "description": "Ocean tides, currents, water levels, and meteorological observations.",
+      "endpoint": "https://api.tidesandcurrents.noaa.gov/api",
+      "docs": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "ocean",
+        "tides",
+        "currents"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Climate Data Online",
+      "description": "Historical climate data including temperature, precipitation, and storm records.",
+      "endpoint": "https://www.ncei.noaa.gov/cdo-web/api/v2",
+      "docs": "https://www.ncei.noaa.gov/support/access-search-service-api-user-documentation",
+      "auth": "api_key",
+      "rate_limit": "strict; per-key",
+      "tags": [
+        "climate",
+        "historical",
+        "temperature"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Storm Events",
+      "description": "Historical storm event data including tornadoes, hail, wind, and severe weather reports.",
+      "endpoint": "https://www.ncdc.noaa.gov/stormevents",
+      "docs": "https://www.ncdc.noaa.gov/stormevents/ftp.jsp",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "storms",
+        "severe_weather",
+        "historical"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Space Weather",
+      "description": "Solar flare, geomagnetic storm, and space weather activity data.",
+      "endpoint": "https://services.swpc.noaa.gov/json",
+      "docs": "https://www.swpc.noaa.gov/products-and-data",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "space_weather",
+        "solar",
+        "geomagnetic"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA Buoy Data",
+      "description": "Real-time buoy observations including wave height, wind speed, and water temperature.",
+      "endpoint": "https://www.ndbc.noaa.gov/data",
+      "docs": "https://www.ndbc.noaa.gov/",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "ocean",
+        "buoys",
+        "observations"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA IOOS Ocean Observations",
+      "description": "Integrated ocean observing data including currents, salinity, and temperature.",
+      "endpoint": "https://api.ioos.us",
+      "docs": "https://ioos.github.io/api/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "ocean",
+        "observations",
+        "environment"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NOAA National Water Model",
+      "description": "Hydrologic modeling data including streamflow, runoff, and water predictions.",
+      "endpoint": "https://water.noaa.gov/api",
+      "docs": "https://water.noaa.gov/about/nwm",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "water",
+        "hydrology",
+        "forecast"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

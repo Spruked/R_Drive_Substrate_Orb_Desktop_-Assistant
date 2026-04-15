@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "mesh_name": "orb_mesh",
+  "created_at": "2026-03-22T05:36:41.525600+00:00",
+  "artifact_envelope": {
+    "artifact_id": "uuid-or-hash",
+    "artifact_type": "insight|embedding_manifest|index_manifest|task|result|state_snapshot",
+    "source_orb": "wsl|desktop|web",
+    "target_orb": "desktop|wsl|web|broadcast|shared",
+    "created_at": "ISO-8601 UTC",
+    "updated_at": "ISO-8601 UTC",
+    "confidence": 0.0,
+    "priority": "low|normal|high",
+    "content_hash": "sha256...",
+    "tags": [],
+    "payload": {}
+  },
+  "task_flow": {
+    "publish_paths": [
+      "tasks/wsl_to_desktop",
+      "tasks/desktop_to_wsl",
+      "tasks/wsl_to_web",
+      "tasks/desktop_to_web",
+      "tasks/web_to_wsl",
+      "tasks/web_to_desktop",
+      "tasks/broadcast"
+    ],
+    "result_paths": [
+      "results/wsl",
+      "results/desktop",
+      "results/web",
+      "results/shared"
+    ]
+  },
+  "sync_rules": [
+    "Each ORB publishes selected high-value artifacts only.",
+    "Each ORB tracks imported artifacts with checkpoints.",
+    "Promotion into promoted_knowledge is curated or policy-driven."
+  ]
+}

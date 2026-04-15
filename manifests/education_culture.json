@@ -1,0 +1,145 @@
+{
+  "category": "Education_Culture",
+  "apis": [
+    {
+      "name": "UNESCO Institute for Statistics API",
+      "description": "Global education indicators including literacy, enrollment, teachers, and cultural statistics.",
+      "endpoint": "http://api.uis.unesco.org",
+      "docs": "http://api.uis.unesco.org",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["education", "global", "unesco"],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "OECD Education API",
+      "description": "Education indicators including PISA results, spending, and workforce statistics.",
+      "endpoint": "https://stats.oecd.org/SDMX-JSON",
+      "docs": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["education", "policy", "international"],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "World Bank Education API",
+      "description": "Global education development indicators including access, quality, and outcomes.",
+      "endpoint": "https://api.worldbank.org/v2",
+      "docs": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["education", "development", "global"],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "Library of Congress API",
+      "description": "Digital collections, historical documents, maps, manuscripts, and cultural archives.",
+      "endpoint": "https://www.loc.gov/apis",
+      "docs": "https://www.loc.gov/apis",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["culture", "history", "archives"],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "Europeana API",
+      "description": "European cultural heritage including art, books, music, and museum collections.",
+      "endpoint": "https://api.europeana.eu",
+      "docs": "https://pro.europeana.eu/page/apis",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": ["culture", "art", "heritage"],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "Smithsonian Open Access API",
+      "description": "Smithsonian museum collections including artifacts, images, and cultural objects.",
+      "endpoint": "https://api.si.edu/openaccess/api/v1.0",
+      "docs": "https://www.si.edu/openaccess",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": ["culture", "museums", "artifacts"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "Wikimedia REST API",
+      "description": "Wikipedia, Wikidata, and Wikimedia Commons structured content and metadata.",
+      "endpoint": "https://api.wikimedia.org",
+      "docs": "https://api.wikimedia.org/wiki/API_reference",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["knowledge", "culture", "wikidata"],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "Wikidata SPARQL Endpoint",
+      "description": "Semantic knowledge graph queries across global cultural, scientific, and historical data.",
+      "endpoint": "https://query.wikidata.org/sparql",
+      "docs": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "auth": "none",
+      "rate_limit": "strict",
+      "tags": ["knowledge_graph", "semantic", "culture"],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "Google Books API",
+      "description": "Book metadata, previews, and bibliographic information.",
+      "endpoint": "https://www.googleapis.com/books/v1",
+      "docs": "https://developers.google.com/books",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": ["books", "literature", "metadata"],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "Open Library API",
+      "description": "Open book metadata, authors, editions, and subject classifications.",
+      "endpoint": "https://openlibrary.org",
+      "docs": "https://openlibrary.org/developers/api",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["books", "metadata", "culture"],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "http_error_rate"]
+      }
+    }
+  ]
+}

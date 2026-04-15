@@ -1,0 +1,165 @@
+{
+  "predicate": {
+    "glow_intensity": 0.8747315816130194,
+    "cognitive_mode": "GUARD-HABIT",
+    "spatial_coordinate": {
+      "node_id": "NODE_10_7",
+      "recursion_depth": 7,
+      "coordinates": [
+        -0.8240000000000001,
+        0.6739999999999999,
+        -0.722,
+        -0.52,
+        0.09800000000000009,
+        0.8939999999999999,
+        -0.748,
+        -0.404,
+        0.19799999999999995,
+        -0.10999999999999999,
+        0.6759999999999999,
+        -0.522,
+        0.788,
+        -0.32799999999999996,
+        -0.488,
+        -0.5880000000000001,
+        0.8740000000000001,
+        -0.762
+      ],
+      "adjacency_value": 0.0
+    },
+    "epistemic_alignment": 0.78175,
+    "deterministic": false,
+    "predictive_intent": {
+      "prediction_type": "UNSURE",
+      "confidence": 0.3,
+      "hume_vivacity": 0.4
+    },
+    "jump_vector": [],
+    "navigation_vector": [
+      -0.4549435745041519,
+      0.03394264472202671
+    ],
+    "final_verdict": "disagreement_detected",
+    "final_verdict_source": "CALI_SKG"
+  },
+  "confidence": 0.8747315816130194,
+  "triad_c_mode": "GUARD-HABIT",
+  "field_density": 767,
+  "ucm_envelope": {
+    "stardate": 1775218791.543751,
+    "glyph_trace": "698405a2e0a664271cfbc4acbba16778ec8ecc1ab2847d8901ce17f1ff7cc1e1",
+    "core_4": {
+      "caleon": {
+        "shadow": {
+          "confidence": 0.925,
+          "reference": "spinoza_monism_skg",
+          "domain": "unknown"
+        },
+        "confidence": 0.925,
+        "advisory_verdict": "monitor"
+      },
+      "kaygee": {
+        "shadow": {
+          "confidence": 0.88,
+          "reference": "kant_critical_skg",
+          "domain": "unknown"
+        },
+        "confidence": 0.88,
+        "advisory_verdict": "monitor"
+      },
+      "cali_x_one": {
+        "shadow": {
+          "confidence": 0.661,
+          "reference": "hume_skepticism_skg",
+          "domain": "unknown"
+        },
+        "confidence": 0.661,
+        "advisory_verdict": "monitor"
+      },
+      "ecm": {
+        "convergence_weights": {
+          "caleon": 0.295810681164055,
+          "kaygee": 0.28141989126958744,
+          "cali_x_one": 0.21138471378317877,
+          "empirical": 0.21138471378317877
+        },
+        "inputs": {
+          "locke": {
+            "confidence": 0.661,
+            "reference": "locke_empiricism_skg",
+            "domain": "unknown"
+          },
+          "hume": {
+            "confidence": 0.661,
+            "reference": "hume_skepticism_skg",
+            "domain": "unknown"
+          },
+          "kant": {
+            "confidence": 0.88,
+            "reference": "kant_critical_skg",
+            "domain": "unknown"
+          },
+          "spinoza": {
+            "confidence": 0.925,
+            "reference": "spinoza_monism_skg",
+            "domain": "unknown"
+          }
+        },
+        "note": "ECM emits convergence weights only (advisory)."
+      }
+    },
+    "advisory_plus_one": {
+      "advisory_only": true,
+      "confidence_gradients": {
+        "caleon": 0.36711110070953534,
+        "kaygee": 0.35095728783129326,
+        "cali_x_one": 0.28193161145917134
+      },
+      "tension_indicators": {
+        "entropy": 1.0923137703887078,
+        "spread": 0.264,
+        "reweight_recommended": true
+      },
+      "suggestion": "consider re-weighting high-tension lobes"
+    },
+    "cali_reflection": {
+      "observational_only": true,
+      "events": [
+        {
+          "type": "drift",
+          "detail": "confidence spread exceeded threshold"
+        },
+        {
+          "type": "anomaly",
+          "detail": "high entropy in lobe gradients"
+        }
+      ],
+      "flags": {
+        "drift_detected": true,
+        "anomaly_detected": true,
+        "ethical_tension": false
+      }
+    },
+    "final_verdict": "monitor",
+    "final_verdict_source": "UCM Core-4 deliberation (ECM advisory only)",
+    "confidence": 0.8747315816130194
+  },
+  "cali_reflection": {
+    "observational_only": true,
+    "events": [
+      {
+        "type": "drift",
+        "detail": "confidence spread exceeded threshold"
+      },
+      {
+        "type": "anomaly",
+        "detail": "high entropy in lobe gradients"
+      }
+    ],
+    "flags": {
+      "drift_detected": true,
+      "anomaly_detected": true,
+      "ethical_tension": false
+    }
+  }
+}

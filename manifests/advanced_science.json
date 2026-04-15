@@ -1,0 +1,145 @@
+{
+  "category": "Advanced_Science",
+  "apis": [
+    {
+      "name": "NASA Earth System Data (ESDS)",
+      "description": "Earth system science datasets including atmosphere, cryosphere, biosphere, and climate models.",
+      "endpoint": "https://earthdata.nasa.gov",
+      "docs": "https://earthdata.nasa.gov/learn/open-data-services-and-software/api",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": ["climate", "earth_system", "models"],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "schema_change_events"]
+      }
+    },
+    {
+      "name": "NOAA Climate Model Data (CMIP/ESGF)",
+      "description": "Climate model outputs including CMIP5/CMIP6, reanalysis, and ensemble projections.",
+      "endpoint": "https://esgf-node.llnl.gov/esg-search",
+      "docs": "https://esgf.llnl.gov",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["climate_models", "cmip", "esgf"],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "schema_change_events"]
+      }
+    },
+    {
+      "name": "USGS ScienceBase API",
+      "description": "Scientific datasets across geology, hydrology, ecosystems, and natural hazards.",
+      "endpoint": "https://www.sciencebase.gov/catalog/items",
+      "docs": "https://www.sciencebase.gov/about/content/api",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["geology", "hydrology", "ecosystems"],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "NCBI Genomics & Bioinformatics API",
+      "description": "Genomic sequences, protein structures, gene expression, and bioinformatics datasets.",
+      "endpoint": "https://api.ncbi.nlm.nih.gov",
+      "docs": "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["genomics", "bioinformatics", "proteins"],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "Protein Data Bank (RCSB PDB)",
+      "description": "Protein structures, macromolecular complexes, and crystallography data.",
+      "endpoint": "https://data.rcsb.org",
+      "docs": "https://data.rcsb.org",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["proteins", "structures", "biochemistry"],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "Materials Project API",
+      "description": "Materials science datasets including crystal structures, properties, and simulations.",
+      "endpoint": "https://materialsproject.org/api",
+      "docs": "https://docs.materialsproject.org",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": ["materials", "chemistry", "crystals"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "Open Quantum Materials Database (OQMD)",
+      "description": "Quantum mechanical calculations of materials properties.",
+      "endpoint": "http://oqmd.org/api",
+      "docs": "http://oqmd.org",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["quantum", "materials", "simulation"],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "CERN Open Data Portal",
+      "description": "High-energy physics datasets from LHC experiments including CMS, ATLAS, ALICE, and LHCb.",
+      "endpoint": "http://opendata.cern.ch/api",
+      "docs": "http://opendata.cern.ch",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["physics", "lhc", "particles"],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "OpenFermion Data",
+      "description": "Quantum chemistry and quantum simulation datasets.",
+      "endpoint": "https://github.com/quantumlib/OpenFermion",
+      "docs": "https://quantumai.google/openfermion",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["quantum", "chemistry", "simulation"],
+      "reliability_score": 87,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "Zenodo Scientific Archive",
+      "description": "Open-access scientific datasets, software, and research artifacts.",
+      "endpoint": "https://zenodo.org/api",
+      "docs": "https://developers.zenodo.org",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["datasets", "science", "archive"],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "label": "Farm Business Income Statement",
+  "variables": {
+    "kount__farm_business_income_statement": {
+      "id": "kount",
+      "name": "Farms",
+      "description": "Estimated number of farms.",
+      "unit": "Number",
+      "sequence": 10
+    },
+    "igcfi__farm_business_income_statement": {
+      "id": "igcfi",
+      "name": "Gross cash farm income",
+      "description": "For farms participating in government programs, gross cash farm income is the total amount of cash received by the farm operation from the sale of agricultural products, services rendered, or government payments received during a given calendar year.",
+      "unit": "Dollars per farm",
+      "sequence": 20
+    },
+    "iliv__farm_business_income_statement": {
+      "id": "iliv",
+      "name": "Livestock income",
+      "description": "The value of all livestock and poultry sold from the farm operation net of any marketing charges.  All sales of livestock through marketing contracts or payments received from prior years' contracts are also included.  For integrated operations, which do not sell the livestock but pass them on to another phase of the operation, an estimate of the value of the livestock moving through the operation is captured as sales.",
+      "unit": "Dollars per farm",
+      "sequence": 30
+    },
+    "icrop__farm_business_income_statement": {
+      "id": "icrop",
+      "name": "Crop sales",
+      "description": "The amount received from cash sales and marketing or forward contracts for all crops plus the difference between Commodity Credit Corporation crop placements and redemptions.  Payments received for crops produced in previous years or delivered under prior year's marketing contracts are included.",
+      "unit": "Dollars per farm",
+      "sequence": 40
+    },
+    "igovt__farm_business_income_statement": {
+      "id": "igovt",
+      "name": "Government payments",
+      "description": "Gross value of direct government payments received by farm operations during the calendar year. Programs for which payments are received include: direct payments, counter-cyclical payments, loan deficiency payments (LDPs), marketing loan gains, peanut quota buyout program, milk income loss contract payments, disaster payments, conservation reserve program (CRP), wetlands reserve program (WRP), environmental quality incentive program (EQIP), and all other Federal and State programs.",
+      "unit": "Dollars per farm",
+      "sequence": 50
+    },
+    "iothfm__farm_business_income_statement": {
+      "id": "iothfm",
+      "name": "Other farm-related income",
+      "description": "Includes income from machine-hire, custom work, livestock grazing, land rental, contract production fees, outdoor recreation, timber sales,  hedging profit or losses, insurance indemnities, cooperative patronage dividends and refunds, leasing of livestock and machinery or equipment, and any other farm-related source.",
+      "unit": "Dollars per farm",
+      "sequence": 60
+    },
+    "etot__farm_business_income_statement": {
+      "id": "etot",
+      "name": "Total cash expenses",
+      "description": "Cash expenses represent the total amount of funds paid out by the farm operation during a calendar year.  Expenses paid by landlords or parties for which a contractual agreement existed during the year are excluded from cash expenses reported for farm operations.  Marketing charges such as commissions, storage, inspection, insurance, drying, check-offs, yardage, and auction are excluded from cash expenses.",
+      "unit": "Dollars per farm",
+      "sequence": 70
+    },
+    "evtot__farm_business_income_statement": {
+      "id": "evtot",
+      "name": "Variable expenses",
+      "description": "Expenses incurred in the production process that vary with the quantity and prices of inputs used.",
+      "unit": "Dollars per farm",
+      "sequence": 80
+    },
+    "evlvpur__farm_business_income_statement": {
+      "id": "evlvpur",
+      "name": "Livestock purchases",
+      "description": "The total amount paid for livestock and poultry including commission, yardage, insurance and other associated fees. Breeding livestock treated as a depreciable capital is not included.",
+      "unit": "Dollars per farm",
+      "sequence": 90
+    },
+    "evfeed__farm_business_income_statement": {
+      "id": "evfeed",
+      "name": "Feed",
+      "description": "Amount paid by the farm operation for all feed grains, hay, forages, mixed or formula feeds, concentrates, supplements, premixes, salt, minerals, animal byproducts, and all other feed additives and ingredients.",
+      "unit": "Dollars per farm",
+      "sequence": 100
+    },
+    "evloth__farm_business_income_statement": {
+      "id": "evloth",
+      "name": "Other livestock-related",
+      "description": "Amount paid by the farm operation during the calendar year for livestock leasing; custom feed processing, grinding or mixing of feed; bedding, litter, or straw; pasturing, grazing or custom feeding, veterinarian services or supplies, amount spent for sprays, dips, dusts or any other chemicals, sheep sheering, horse-shoeing, removal of dead animals, branding, artificial insemination and breeding fees, and performance testing.",
+      "unit": "Dollars per farm",
+      "sequence": 110
+    },
+    "evseedp__farm_business_income_statement": {
+      "id": "evseedp",
+      "name": "Seed and plants",
+      "description": "Expenses for purchases of seeds, plants, and related expenses such as seed cleaning, inoculation, rooting hormones, bagging, germinating, and delinting",
+      "unit": "Dollars per farm",
+      "sequence": 120
+    },
+    "evfertc__farm_business_income_statement": {
+      "id": "evfertc",
+      "name": "Fertilizer and chemicals",
+      "description": "Amount the farm operation paid for commercial fertilizers, lime and soil conditioners, pesticides, insecticides, herbicides, fungicides, defoliants, nematicides, fumigants, growth regulators, and rodenticides used on crops, pasture, acreage idled under government programs, seeds, crop storage buildings or seed beds.",
+      "unit": "Dollars per farm",
+      "sequence": 130
+    },
+    "evutil__farm_business_income_statement": {
+      "id": "evutil",
+      "name": "Utilities",
+      "description": "Farm operations' share of expenses for electricity, telephone, and water including charges for irrigation water and electricity.",
+      "unit": "Dollars per farm",
+      "sequence": 140
+    },
+    "evlabor__farm_business_income_statement": {
+      "id": "evlabor",
+      "name": "Labor",
+      "description": "Expenses for contract and hired labor engaged in \"agricultural work\" during the calendar year.  Total cash wages include bonuses for all hired workers(including paid family members) and employees' share of social security taxes.  Costs associated with fringe benefits such as insurance, pensions, workers compensation, and unemployment compensation are also included in labor expense.  Wages paid to operators that are not hired managers are excluded.",
+      "unit": "Dollars per farm",
+      "sequence": 150
+    },
+    "evfuelo__farm_business_income_statement": {
+      "id": "evfuelo",
+      "name": "Fuels and oils",
+      "description": "Farm share of the operations' purchases of diesel, gasoline, liquid petroleum, natural gas, other fuels (kerosene, coal, wood), and motor oils and fluids. Includes fuels used for heating farm buildings and offices, drying or curing crops, and all machinery and equipment (including irrigation pumps).",
+      "unit": "Dollars per farm",
+      "sequence": 160
+    },
+    "evmainr__farm_business_income_statement": {
+      "id": "evmainr",
+      "name": "Repairs and maintenance",
+      "description": "Amount paid by the operation for repairs and maintenance of motor vehicles, machinery and equipment, irrigation and frost protection equipment, farm buildings, the operator's dwelling, and any other labor dwellings, fencing, soil conservation structures, drainage structures, and any other farm or ranch structures (corrals, feedlots, feeding floors).",
+      "unit": "Dollars per farm",
+      "sequence": 170
+    },
+    "evcwork__farm_business_income_statement": {
+      "id": "evcwork",
+      "name": "Machine-hire and custom work",
+      "description": "Amount spent by the operation for custom hauling and other custom work such as land tillage, planting or seeding, harvesting, and soil testing.  Custom work is defined as work preformed by machines and labor hired as a unit.",
+      "unit": "Dollars per farm",
+      "sequence": 180
+    },
+    "evoth__farm_business_income_statement": {
+      "id": "evoth",
+      "name": "Other variable expenses",
+      "description": "Includes supplies, motor vehicle registration fees, transportation and storage, and all other general business expenses (for example, fees paid to accountants or attorneys, registration of purebred animals, travel expenses, postage, and magazine subscriptions).",
+      "unit": "Dollars per farm",
+      "sequence": 190
+    },
+    "eftot__farm_business_income_statement": {
+      "id": "eftot",
+      "name": "Fixed expenses",
+      "description": "Represents costs incurred by the farm operation during the calendar year, even when there is no production.",
+      "unit": "Dollars per farm",
+      "sequence": 200
+    },
+    "eftaxes__farm_business_income_statement": {
+      "id": "eftaxes",
+      "name": "Real estate and property taxes",
+      "description": "Expenses for taxes on farm land, buildings, capital improvements, machines, livestock, and other property.  Includes all taxes paid during the calendar year even though they may have been levied in another year.",
+      "unit": "Dollars per farm",
+      "sequence": 210
+    },
+    "efint__farm_business_income_statement": {
+      "id": "efint",
+      "name": "Interest",
+      "description": "Amount paid by the farm operation for interest on farm business loans and mortgages, land contracts, and other farm loans secured by real estate, finance charges for operating loans, machinery and equipment loans, or any other interest on non-real estate loans.",
+      "unit": "Dollars per farm",
+      "sequence": 220
+    },
+    "efins__farm_business_income_statement": {
+      "id": "efins",
+      "name": "Insurance premiums",
+      "description": "Amount spent by the farm operation for Federal Crop Insurance, and the farm share of motor vehicle, liability, and blanket policies which provide more than one year's coverage.",
+      "unit": "Dollars per farm",
+      "sequence": 230
+    },
+    "efrent__farm_business_income_statement": {
+      "id": "efrent",
+      "name": "Rent and lease payments",
+      "description": "Expenses for land rental (including Public Industrial Grazing Association land), all vehicles, tractors, farm machinery, equipment, and structures leased.",
+      "unit": "Dollars per farm",
+      "sequence": 240
+    },
+    "incfi__farm_business_income_statement": {
+      "id": "incfi",
+      "name": "Net cash farm income",
+      "description": "This measure indicates the amount of net cash earnings from all business sources that a farm generates during the year.  These funds can be used to repay principal on indebtedness, purchase new machinery or equipment, expand the farm business, or pay for family consumption or other obligations.",
+      "unit": "Dollars per farm",
+      "sequence": 250
+    },
+    "inmon__farm_business_income_statement": {
+      "id": "inmon",
+      "name": "Nonmoney income",
+      "description": "An estimated value of items produced and consumed on the farm, and the imputed rental value of farm dwellings.",
+      "unit": "Dollars per farm",
+      "sequence": 260
+    },
+    "ivalinv__farm_business_income_statement": {
+      "id": "ivalinv",
+      "name": "Value of inventory change",
+      "description": "The change in the market value of all crops, livestock, or purchased inputs from January 1 of the calendar to December 31.",
+      "unit": "Dollars per farm",
+      "sequence": 270
+    },
+    "endepr__farm_business_income_statement": {
+      "id": "endepr",
+      "name": "Depreciation",
+      "description": "An allocation of the portion of the original cost of a capital asset to each of the estimated years in which the asset will be used.  The type of depreciation reported on the survey typically resembles the figure reported on tax returns.",
+      "unit": "Dollars per farm",
+      "sequence": 280
+    },
+    "enben__farm_business_income_statement": {
+      "id": "enben",
+      "name": "Labor, non-cash benefits",
+      "description": "Includes an estimate of the value of housing or lodging provided to workers, meals, fuel, vehicles, utilities, or payment in kind. An estimate of the value of products produced and consumed on the farm is provided by the survey respondent. The imputed rental value of farm dwellings is calculated for dwellings located on the farm and is based on rent-to-value ratios for different value ranges of the dwelling.",
+      "unit": "Dollars per farm",
+      "sequence": 290
+    },
+    "breedingadj__farm_business_income_statement": {
+      "id": "breedingadj",
+      "name": "Adjusted breeding livestock income",
+      "description": "The amount of unrecovered investment in breeding livestock upon sale, reflecting the difference between gross proceeds from the sale and the recognized gain after accounting for investment costs.",
+      "unit": "Dollars per farm",
+      "sequence": 300
+    },
+    "infi__farm_business_income_statement": {
+      "id": "infi",
+      "name": "Net farm income",
+      "description": "Net farm income indicates the profit or loss associated with current production. It represents the return (both monetary and nonmonetary) to farm operators for their labor, management and capital after all production expenses have been paid (that is, gross farm income minus production expenses). It includes net income from farm production as well as net income attributed to the rental value of farm dwellings, the value of commodities consumed on the farm, depreciation, and inventory changes.",
+      "unit": "Dollars per farm",
+      "sequence": 310
+    }
+  }
+}

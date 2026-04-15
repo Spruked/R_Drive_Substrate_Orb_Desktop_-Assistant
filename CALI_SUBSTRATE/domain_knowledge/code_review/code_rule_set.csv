@@ -1,0 +1,8 @@
+rule_id,category,description,severity,linked_topic,applies_to_languages,implications,edge_case_handling
+no_hardcoded_credentials,security,"Passwords, API keys, or secrets must never be hardcoded in source",critical,security,"All languages","Triggers immediate security_audit failure","Environment variable or secret manager recommendation required"
+require_input_validation,security,All user or external input must be sanitized and validated,high,security,"All languages","Prevents injection attacks","Partial validation (e.g., only length) still flagged"
+no_infinite_loops,logic,Control flows must have termination conditions or timeouts,high,logic,"All languages","Prevents hangs","Intentional long-running processes require explicit comment + timeout"
+rate_limit_api_calls,performance,External API calls must implement rate limiting and backoff,medium,"performance,api_usage","All languages","Prevents abuse and quota exhaustion","Retry logic must be exponential backoff"
+proper_error_handling,reliability,All potential failure points must have explicit error handling and logging,high,error_handling,"All languages","Improves reliability","Custom exceptions must be caught at appropriate level"
+dependency_version_pinning,dependencies,Dependencies must use pinned versions or lockfiles,medium,dependencies,"All languages","Prevents supply-chain surprises","Approved dependency list can override"
+owasp_top10_compliance,security,Must address OWASP Top 10 risks where applicable,high,security,"Web languages","Industry standard compliance","Medical/financial code raises severity to critical"

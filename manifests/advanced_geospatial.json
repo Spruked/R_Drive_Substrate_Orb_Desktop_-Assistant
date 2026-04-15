@@ -1,0 +1,117 @@
+{
+  "category": "Advanced_Geospatial",
+  "apis": [
+    {
+      "name": "OGC WMS/WFS/WCS Services",
+      "description": "Open Geospatial Consortium services for maps, features, and coverage data.",
+      "endpoint": "https://www.ogc.org/standards/wms",
+      "docs": "https://www.ogc.org/standards",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["ogc", "geospatial", "gis"],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "schema_change_events"]
+      }
+    },
+    {
+      "name": "USGS National Map (TNM) Services",
+      "description": "High-resolution elevation, hydrography, boundaries, land cover, and orthoimagery.",
+      "endpoint": "https://services.nationalmap.gov/arcgis/rest/services",
+      "docs": "https://apps.nationalmap.gov/services",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["elevation", "imagery", "hydrography"],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "ESA Copernicus Open Access Hub",
+      "description": "Sentinel satellite imagery metadata and search endpoints.",
+      "endpoint": "https://scihub.copernicus.eu/dhus",
+      "docs": "https://scihub.copernicus.eu/userguide",
+      "auth": "api_key_optional",
+      "rate_limit": "strict",
+      "tags": ["sentinel", "satellite", "imagery"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "JAXA G-Portal",
+      "description": "Japanese Earth observation data including ALOS, GCOM, and GPM missions.",
+      "endpoint": "https://gportal.jaxa.jp",
+      "docs": "https://gportal.jaxa.jp/gpr",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": ["jaxa", "satellite", "earth_observation"],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "OpenTopography API",
+      "description": "High-resolution topography, LiDAR, and DEM datasets.",
+      "endpoint": "https://portal.opentopography.org",
+      "docs": "https://opentopography.org/developers",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": ["lidar", "topography", "dem"],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "Natural Earth Data",
+      "description": "Public domain vector and raster map layers for global cartography.",
+      "endpoint": "https://www.naturalearthdata.com",
+      "docs": "https://www.naturalearthdata.com",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["cartography", "gis", "global"],
+      "reliability_score": 99,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "OpenStreetMap Overpass API",
+      "description": "Queryable global map data including roads, buildings, and infrastructure.",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "docs": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "auth": "none",
+      "rate_limit": "strict",
+      "tags": ["osm", "infrastructure", "gis"],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "Mapbox Terrain & Elevation (public endpoints)",
+      "description": "Terrain tiles, elevation grids, and vector layers.",
+      "endpoint": "https://api.mapbox.com",
+      "docs": "https://docs.mapbox.com/api",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": ["terrain", "tiles", "elevation"],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "http_error_rate"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "cali-ucm-4-core",
+  "version": "2.1.0",
+  "description": "Electron UI for CALI UCM_4_Core Superintelligence System",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "node scripts/start-electron.js",
+    "start:instance": "bash ../scripts/launch_orb_instance.sh",
+    "dev": "node scripts/start-electron.js --inspect",
+    "check:dock": "node --check src/ui/orb-dock-station-substrate.js && node --check main/main.js && node --check main/preload.js && node --check main/orb-bridge.js",
+    "check:runtime": "node --check src/cali-launcher.js && npm run test:orb",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --publish=never",
+    "postinstall": "electron-builder install-app-deps",
+    "test:orb": "python -m py_compile src/core-bridges/cali.py src/core-bridges/kaygee.py src/core-bridges/caleon.py src/core-bridges/cali_x_one.py src/core-bridges/ucm_core_ecm.py",
+    "dev:orb": "npm start"
+  },
+  "dependencies": {
+    "python-shell": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "ws": "^8.15.1",
+    "concurrently": "^8.2.2",
+    "kill-port": "^2.0.1"
+  },
+  "build": {
+    "appId": "com.cali.floatingorb",
+    "productName": "CALI Floating Orb",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main/**/*",
+      "src/**/*",
+      "node_modules/**/*",
+      "cjs-build/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

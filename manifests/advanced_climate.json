@@ -1,0 +1,145 @@
+{
+  "category": "Advanced_Climate",
+  "apis": [
+    {
+      "name": "NOAA ESRL Reanalysis (PSD)",
+      "description": "NOAA Physical Sciences Laboratory reanalysis datasets including NCEP/NCAR, 20CR, and atmospheric variables.",
+      "endpoint": "https://psl.noaa.gov/thredds",
+      "docs": "https://psl.noaa.gov/data/gridded/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["reanalysis", "atmosphere", "noaa"],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "schema_change_events"]
+      }
+    },
+    {
+      "name": "NASA GISS Climate Data",
+      "description": "Surface temperature anomalies, climate forcing datasets, and long-term climate indicators.",
+      "endpoint": "https://data.giss.nasa.gov",
+      "docs": "https://data.giss.nasa.gov/gistemp/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["temperature", "forcing", "nasa"],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "NASA Giovanni Climate Portal",
+      "description": "Earth science data exploration including aerosols, water vapor, precipitation, and radiative flux.",
+      "endpoint": "https://giovanni.gsfc.nasa.gov",
+      "docs": "https://giovanni.gsfc.nasa.gov/giovanni/#documentation",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["aerosols", "precipitation", "radiation"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "Copernicus Climate Data Store (CDS)",
+      "description": "ERA5 reanalysis, climate projections, seasonal forecasts, and environmental datasets.",
+      "endpoint": "https://cds.climate.copernicus.eu/api",
+      "docs": "https://cds.climate.copernicus.eu/api-how-to",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": ["era5", "reanalysis", "europe"],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["rate_limit_hits", "latency"]
+      }
+    },
+    {
+      "name": "ECMWF Public Data (Subset)",
+      "description": "European Centre for Medium-Range Weather Forecasts climate and weather datasets.",
+      "endpoint": "https://www.ecmwf.int/en/forecasts/datasets",
+      "docs": "https://confluence.ecmwf.int/display/WEBAPI/ECMWF+Web+API+Home",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": ["ecmwf", "weather", "climate"],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "ESGF CMIP5/CMIP6 Climate Models",
+      "description": "Earth System Grid Federation climate model ensembles used in IPCC assessments.",
+      "endpoint": "https://esgf-node.llnl.gov/esg-search",
+      "docs": "https://esgf.llnl.gov",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["cmip5", "cmip6", "models"],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["schema_change_events"]
+      }
+    },
+    {
+      "name": "NOAA Global Monitoring Laboratory (GML)",
+      "description": "Greenhouse gas concentrations, atmospheric chemistry, and climate forcing datasets.",
+      "endpoint": "https://gml.noaa.gov",
+      "docs": "https://gml.noaa.gov/dv/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["ghg", "chemistry", "forcing"],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "EPA Greenhouse Gas Reporting Program (GHGRP)",
+      "description": "Facility-level greenhouse gas emissions across the United States.",
+      "endpoint": "https://ghgdata.epa.gov",
+      "docs": "https://www.epa.gov/ghgreporting",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["emissions", "epa", "ghg"],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency"]
+      }
+    },
+    {
+      "name": "Global Carbon Project",
+      "description": "Global carbon budgets, emissions inventories, and land/ocean carbon flux datasets.",
+      "endpoint": "https://www.globalcarbonproject.org",
+      "docs": "https://www.globalcarbonproject.org/carbonbudget",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["carbon", "emissions", "climate"],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "NSIDC Cryosphere Data",
+      "description": "Snow, ice, sea ice extent, glaciers, and cryosphere climate indicators.",
+      "endpoint": "https://nsidc.org/api",
+      "docs": "https://nsidc.org/data",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["cryosphere", "ice", "snow"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    }
+  ]
+}

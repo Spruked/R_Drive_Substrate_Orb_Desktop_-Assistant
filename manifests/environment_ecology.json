@@ -1,0 +1,228 @@
+{
+  "category": "Environment_Ecology",
+  "apis": [
+    {
+      "name": "EPA EnviroFacts API",
+      "description": "Environmental datasets including air, water, waste, and toxic chemical releases.",
+      "endpoint": "https://enviro.epa.gov/enviro/efservice",
+      "docs": "https://www.epa.gov/enviro/envirofacts-data-service-api",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "environment",
+        "pollution",
+        "epa"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "EPA Air Quality System (AQS)",
+      "description": "Air quality monitoring data including pollutants, sensors, and historical readings.",
+      "endpoint": "https://aqs.epa.gov/aqsweb/documents/data_api.html",
+      "docs": "https://aqs.epa.gov/aqsweb/documents/data_api.html",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "air_quality",
+        "pollution",
+        "environment"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "EPA ECHO API",
+      "description": "Compliance and enforcement data for facilities regulated under environmental laws.",
+      "endpoint": "https://echo.epa.gov/tools/web-services",
+      "docs": "https://echo.epa.gov/tools/web-services",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "compliance",
+        "pollution",
+        "facilities"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "USGS Biodiversity Information Serving Our Nation (BISON)",
+      "description": "Species occurrence data across the United States.",
+      "endpoint": "https://bison.usgs.gov/api",
+      "docs": "https://bison.usgs.gov/#api",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "biodiversity",
+        "species",
+        "ecology"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "GBIF API",
+      "description": "Global biodiversity data including species occurrences and taxonomy.",
+      "endpoint": "https://api.gbif.org/v1",
+      "docs": "https://www.gbif.org/developer/summary",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "biodiversity",
+        "species",
+        "global"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "IUCN Red List API",
+      "description": "Threatened species data including conservation status and population trends.",
+      "endpoint": "https://apiv3.iucnredlist.org/api/v3",
+      "docs": "https://apiv3.iucnredlist.org/api/v3/docs",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "conservation",
+        "species",
+        "ecology"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "UNEP Environmental Data Explorer",
+      "description": "Global environmental indicators including climate, water, forests, and ecosystems.",
+      "endpoint": "https://geodata.grid.unep.ch",
+      "docs": "https://geodata.grid.unep.ch",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "global",
+        "environment",
+        "ecosystems"
+      ],
+      "reliability_score": 87,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NASA EarthData (subset public endpoints)",
+      "description": "Earth science datasets including land, atmosphere, oceans, and climate indicators.",
+      "endpoint": "https://earthdata.nasa.gov",
+      "docs": "https://earthdata.nasa.gov/learn/open-data-services-and-software/api",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "climate",
+        "earth_science",
+        "environment"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Copernicus Climate Data Store API",
+      "description": "Climate reanalysis, forecasts, and environmental datasets from the EU Copernicus program.",
+      "endpoint": "https://cds.climate.copernicus.eu/api",
+      "docs": "https://cds.climate.copernicus.eu/api-how-to",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "climate",
+        "reanalysis",
+        "europe"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "Global Forest Watch API",
+      "description": "Forest change, land use, fires, and environmental monitoring.",
+      "endpoint": "https://data-api.globalforestwatch.org",
+      "docs": "https://www.globalforestwatch.org/howto/api/",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "forests",
+        "land_use",
+        "environment"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "category": "machine_learning",
+  "updated_on": "2026-03-16",
+  "status": "rebuilt",
+  "purpose": "Define how CALI uses R:\\ as a machine-learning-adjacent offline cache, retrieval layer, and knowledge distillation substrate.",
+  "roots": {
+    "datasets": "R:\\datasets\\bulk_mirrors\\machine_learning",
+    "embeddings": "R:\\embeddings\\machine_learning",
+    "indexes": "R:\\indexes\\machine_learning",
+    "vector_indexes": "R:\\vector_indexes\\machine_learning",
+    "snapshots": "R:\\snapshots\\machine_learning",
+    "registry_exports": "R:\\registry_exports\\machine_learning"
+  },
+  "primary_goals": [
+    "Maintain local research corpora relevant to machine learning and AI.",
+    "Build embeddings and vector indexes for fast semantic retrieval.",
+    "Support knowledge distillation, semantic clustering, and pattern extraction.",
+    "Preserve fallback access when external sources are unavailable or unstable."
+  ],
+  "source_families": [
+    {
+      "id": "research_papers",
+      "priority": "high",
+      "examples": [
+        "arXiv metadata",
+        "OpenAlex scholarly metadata",
+        "Papers with Code metadata"
+      ],
+      "uses": [
+        "literature mapping",
+        "method comparison",
+        "citation trails",
+        "trend analysis"
+      ]
+    },
+    {
+      "id": "model_registries",
+      "priority": "high",
+      "examples": [
+        "Hugging Face model metadata",
+        "model cards",
+        "benchmark leaderboards"
+      ],
+      "uses": [
+        "capability cataloging",
+        "model selection",
+        "architecture comparison"
+      ]
+    },
+    {
+      "id": "datasets_and_benchmarks",
+      "priority": "high",
+      "examples": [
+        "public benchmark registries",
+        "dataset cards",
+        "evaluation tables"
+      ],
+      "uses": [
+        "benchmark tracking",
+        "dataset lineage",
+        "task coverage analysis"
+      ]
+    },
+    {
+      "id": "patents_and_innovation",
+      "priority": "medium",
+      "examples": [
+        "patent metadata",
+        "innovation registries",
+        "technical classification tables"
+      ],
+      "uses": [
+        "prior art review",
+        "innovation mapping",
+        "classification crosswalks"
+      ]
+    },
+    {
+      "id": "education_and_reference",
+      "priority": "medium",
+      "examples": [
+        "open textbooks",
+        "course catalogs",
+        "reference glossaries"
+      ],
+      "uses": [
+        "concept grounding",
+        "terminology normalization",
+        "curriculum mapping"
+      ]
+    }
+  ],
+  "index_layers": [
+    "keyword_search_indexes",
+    "vector_similarity_indexes",
+    "entity_and_term_indexes",
+    "citation_and_reference_graphs",
+    "time_series_trend_tables"
+  ],
+  "processing_pipeline": [
+    "ingest",
+    "normalize",
+    "dedupe",
+    "chunk",
+    "embed",
+    "index",
+    "cross_reference",
+    "snapshot",
+    "export_registry"
+  ],
+  "retrieval_modes": [
+    "semantic_search",
+    "keyword_lookup",
+    "citation_graph_walk",
+    "cross_dataset_correlation",
+    "time_series_comparison"
+  ],
+  "resilience_benefits": [
+    "works when APIs are offline or rate-limited",
+    "reduces repeated download costs",
+    "preserves stable historical snapshots",
+    "supports fast local experimentation"
+  ],
+  "legal_and_operational_posture": [
+    "Prefer public, open, and research-friendly sources.",
+    "Respect source terms even when data is locally cached.",
+    "Keep provenance in manifests and registry exports.",
+    "Use snapshots before large refreshes when practical."
+  ],
+  "initial_build_queue": [
+    "Create machine_learning subfolders under datasets, embeddings, indexes, vector_indexes, snapshots, and registry_exports.",
+    "Add source manifests for scholarly metadata, model registries, benchmark tables, and patent metadata.",
+    "Define chunking and embedding policy for long-form documents.",
+    "Create crosswalk tables between tasks, datasets, models, and benchmark families."
+  ],
+  "success_signals": [
+    "CALI can answer machine learning research questions from local storage first.",
+    "Embeddings and vector indexes cover the highest-value machine learning corpora.",
+    "Model, dataset, and benchmark references are cross-linked.",
+    "Offline retrieval remains useful even when no network source is available."
+  ]
+}

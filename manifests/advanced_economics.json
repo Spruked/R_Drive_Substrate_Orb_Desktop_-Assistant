@@ -1,0 +1,131 @@
+{
+  "category": "Advanced_Economics",
+  "apis": [
+    {
+      "name": "IMF SDMX API",
+      "description": "International Monetary Fund macroeconomic indicators, financial statistics, and global economic datasets.",
+      "endpoint": "https://sdmxcentral.imf.org/ws/public/sdmxapi/rest",
+      "docs": "https://data.imf.org",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["imf", "macroeconomics", "sdmx"],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency", "schema_change_events"]
+      }
+    },
+    {
+      "name": "BIS Statistics Explorer API",
+      "description": "Bank for International Settlements data including credit, debt, derivatives, and global banking flows.",
+      "endpoint": "https://stats.bis.org/api",
+      "docs": "https://stats.bis.org",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["bis", "banking", "global_finance"],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "ECB SDW (Statistical Data Warehouse)",
+      "description": "European Central Bank monetary, financial, and macroeconomic indicators.",
+      "endpoint": "https://sdw-wsrest.ecb.europa.eu/service",
+      "docs": "https://sdw.ecb.europa.eu/web/guided-datasets",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": ["ecb", "europe", "sdmx"],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "OECD SDMX Advanced",
+      "description": "OECD advanced economic indicators including productivity, taxation, trade, and structural analysis.",
+      "endpoint": "https://stats.oecd.org/SDMX-JSON",
+      "docs": "https://data.oecd.org/api/sdmx-json-documentation/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["oecd", "economics", "international"],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime", "latency"]
+      }
+    },
+    {
+      "name": "WTO Trade Statistics API (Advanced)",
+      "description": "World Trade Organization detailed trade flows, tariffs, and trade policy indicators.",
+      "endpoint": "https://api.wto.org/timeseries/v1",
+      "docs": "https://apiportal.wto.org",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": ["trade", "tariffs", "global"],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "UN Comtrade API",
+      "description": "Global trade data including imports, exports, commodities, and partner flows.",
+      "endpoint": "https://comtradeapi.un.org/public/v1",
+      "docs": "https://comtradeapi.un.org",
+      "auth": "api_key_optional",
+      "rate_limit": "strict",
+      "tags": ["trade", "commodities", "global"],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "rate_limit_hits"]
+      }
+    },
+    {
+      "name": "World Bank SDMX Advanced",
+      "description": "Deep access to World Bank SDMX datasets including structural, financial, and development indicators.",
+      "endpoint": "https://api.worldbank.org/v2/sdmx",
+      "docs": "https://datahelpdesk.worldbank.org",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": ["world_bank", "sdmx", "development"],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    },
+    {
+      "name": "FRED Advanced Series API",
+      "description": "Federal Reserve Bank of St. Louis advanced economic series including financial stress, yield curves, and structural indicators.",
+      "endpoint": "https://api.stlouisfed.org/fred",
+      "docs": "https://fred.stlouisfed.org/docs/api/fred/",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": ["fred", "macroeconomics", "finance"],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["latency", "http_error_rate"]
+      }
+    },
+    {
+      "name": "Global Financial Data (GFD) Public Subset",
+      "description": "Historical financial and economic datasets (public subset only).",
+      "endpoint": "https://www.globalfinancialdata.com",
+      "docs": "https://www.globalfinancialdata.com",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": ["history", "finance", "economics"],
+      "reliability_score": 85,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": ["uptime"]
+      }
+    }
+  ]
+}

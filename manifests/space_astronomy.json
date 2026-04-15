@@ -1,0 +1,227 @@
+{
+  "category": "Space_Astronomy",
+  "apis": [
+    {
+      "name": "NASA Open APIs",
+      "description": "Astronomy Picture of the Day, Mars rover photos, Earth imagery, and mission data.",
+      "endpoint": "https://api.nasa.gov",
+      "docs": "https://api.nasa.gov",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "nasa",
+        "space",
+        "imagery"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "NASA JPL Horizons API (via SSD/CNEOS)",
+      "description": "Ephemerides, orbital elements, and trajectory data for solar system bodies.",
+      "endpoint": "https://ssd-api.jpl.nasa.gov",
+      "docs": "https://ssd-api.jpl.nasa.gov/doc/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "ephemerides",
+        "orbits",
+        "solar_system"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NASA CNEOS API",
+      "description": "Near-Earth object data including close approaches, impact risks, and orbital parameters.",
+      "endpoint": "https://ssd-api.jpl.nasa.gov/cad.api",
+      "docs": "https://cneos.jpl.nasa.gov",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "neo",
+        "asteroids",
+        "orbits"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ESA Sky API",
+      "description": "European Space Agency astronomical data including catalogs and sky survey access.",
+      "endpoint": "https://sky.esa.int/esasky-tap",
+      "docs": "https://sky.esa.int",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "esa",
+        "astronomy",
+        "catalogs"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ESA Space Weather API",
+      "description": "Solar activity, geomagnetic indices, and space weather alerts.",
+      "endpoint": "https://swe.ssa.esa.int",
+      "docs": "https://swe.ssa.esa.int/web/guest/api",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "space_weather",
+        "solar",
+        "geomagnetic"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Space Weather Prediction Center (NOAA SWPC)",
+      "description": "Solar flares, geomagnetic storms, aurora forecasts, and space weather models.",
+      "endpoint": "https://services.swpc.noaa.gov",
+      "docs": "https://www.swpc.noaa.gov/content/api",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "solar",
+        "space_weather",
+        "noaa"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Minor Planet Center API",
+      "description": "Asteroid and comet observations, orbits, and discovery data.",
+      "endpoint": "https://minorplanetcenter.net",
+      "docs": "https://minorplanetcenter.net/data",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "asteroids",
+        "comets",
+        "orbits"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Open Exoplanet Catalogue",
+      "description": "Exoplanet data including orbital parameters, host star properties, and discovery methods.",
+      "endpoint": "https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue",
+      "docs": "https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "exoplanets",
+        "astronomy",
+        "catalogs"
+      ],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "SIMBAD Astronomical Database",
+      "description": "Astronomical object database including stars, galaxies, and celestial sources.",
+      "endpoint": "http://simbad.u-strasbg.fr/simbad/sim-tap",
+      "docs": "http://simbad.u-strasbg.fr",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "stars",
+        "galaxies",
+        "catalogs"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ADS (Astrophysics Data System)",
+      "description": "NASA/Harvard astrophysics papers, citations, and research metadata.",
+      "endpoint": "https://api.adsabs.harvard.edu/v1",
+      "docs": "https://adsabs.github.io/help/api/",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "papers",
+        "astronomy",
+        "research"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    }
+  ]
+}

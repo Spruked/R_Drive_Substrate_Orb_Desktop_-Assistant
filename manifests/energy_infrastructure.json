@@ -1,0 +1,207 @@
+{
+  "category": "Energy_Infrastructure",
+  "apis": [
+    {
+      "name": "EIA Open Data API",
+      "description": "U.S. Energy Information Administration data including electricity, petroleum, natural gas, coal, and renewables.",
+      "endpoint": "https://api.eia.gov",
+      "docs": "https://www.eia.gov/opendata/",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "energy",
+        "electricity",
+        "oil",
+        "gas",
+        "renewables"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "EPA Emissions & Generation Resource Integrated Database (eGRID)",
+      "description": "Power plant emissions, generation, and fuel mix data for the U.S. electric grid.",
+      "endpoint": "https://www.epa.gov/egrid",
+      "docs": "https://www.epa.gov/egrid/egrid-data-explorer",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "emissions",
+        "power_plants",
+        "electricity"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OpenEI Utility Rate API",
+      "description": "Electric utility rates, tariffs, and service territories.",
+      "endpoint": "https://api.openei.org/utility_rates",
+      "docs": "https://openei.org/services/doc/rest/",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "utilities",
+        "electricity",
+        "rates"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Open Power System Data (OPSD)",
+      "description": "European power system data including load, generation, weather, and market indicators.",
+      "endpoint": "https://data.open-power-system-data.org",
+      "docs": "https://open-power-system-data.org",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "electricity",
+        "europe",
+        "grid"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ENTSO-E Transparency Platform",
+      "description": "European grid transparency data including generation, load, outages, and cross-border flows.",
+      "endpoint": "https://transparency.entsoe.eu/api",
+      "docs": "https://transparency.entsoe.eu/content/static_content/Static%20content/web%20api/Guide.html",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "grid",
+        "europe",
+        "electricity"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "Global Power Plant Database (WRI)",
+      "description": "Global dataset of power plants including capacity, fuel type, and geolocation.",
+      "endpoint": "https://datasets.wri.org/dataset/globalpowerplantdatabase",
+      "docs": "https://datasets.wri.org",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "power_plants",
+        "global",
+        "infrastructure"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "IEA Open Data (subset public)",
+      "description": "Energy balances, emissions, and renewable energy statistics.",
+      "endpoint": "https://api.iea.org",
+      "docs": "https://www.iea.org/data-and-statistics/data-tools",
+      "auth": "api_key_optional",
+      "rate_limit": "low",
+      "tags": [
+        "energy",
+        "global",
+        "emissions"
+      ],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Open Infrastructure Map (OSM-based)",
+      "description": "Global infrastructure layers including power lines, substations, and pipelines.",
+      "endpoint": "https://openinframap.org",
+      "docs": "https://openinframap.org/about",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "infrastructure",
+        "power_lines",
+        "pipelines"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Global Energy Observatory (GEO)",
+      "description": "Worldwide energy infrastructure including power plants, refineries, pipelines, and storage.",
+      "endpoint": "https://globalenergyobservatory.org",
+      "docs": "https://globalenergyobservatory.org",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "energy",
+        "infrastructure",
+        "global"
+      ],
+      "reliability_score": 87,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

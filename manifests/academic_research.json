@@ -1,0 +1,228 @@
+{
+  "category": "Academic_Research",
+  "apis": [
+    {
+      "name": "arXiv API",
+      "description": "Access to scientific preprints across physics, math, CS, and more.",
+      "endpoint": "http://export.arxiv.org/api/query",
+      "docs": "https://arxiv.org/help/api",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "preprints",
+        "science",
+        "research"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "Semantic Scholar API",
+      "description": "Scholarly metadata, citations, authors, and paper embeddings.",
+      "endpoint": "https://api.semanticscholar.org/graph/v1",
+      "docs": "https://api.semanticscholar.org/api-docs/",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "citations",
+        "papers",
+        "metadata"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "CrossRef API",
+      "description": "DOI lookup, citation metadata, and scholarly publication records.",
+      "endpoint": "https://api.crossref.org",
+      "docs": "https://api.crossref.org/swagger-ui/index.html",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "doi",
+        "citations",
+        "publications"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "OpenAlex",
+      "description": "Open catalog of papers, authors, institutions, and citation networks.",
+      "endpoint": "https://api.openalex.org",
+      "docs": "https://docs.openalex.org/",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "citations",
+        "papers",
+        "knowledge_graph"
+      ],
+      "reliability_score": 99,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "Europe PMC",
+      "description": "Biomedical literature, preprints, and full-text metadata.",
+      "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest",
+      "docs": "https://europepmc.org/RestfulWebService",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "biomedical",
+        "literature",
+        "preprints"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "CORE API",
+      "description": "Aggregated open access research papers from repositories worldwide.",
+      "endpoint": "https://api.core.ac.uk/v3",
+      "docs": "https://core.ac.uk/services#api",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "open_access",
+        "papers",
+        "repositories"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "OpenAIRE API",
+      "description": "European open science metadata including publications, datasets, and projects.",
+      "endpoint": "https://api.openaire.eu",
+      "docs": "https://develop.openaire.eu/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "open_science",
+        "metadata",
+        "publications"
+      ],
+      "reliability_score": 91,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Harvard Dataverse API",
+      "description": "Access to research datasets hosted on the Dataverse platform.",
+      "endpoint": "https://dataverse.harvard.edu/api",
+      "docs": "https://guides.dataverse.org/en/latest/api/",
+      "auth": "api_key_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "datasets",
+        "research",
+        "metadata"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Smithsonian Open Access",
+      "description": "Cultural, scientific, and historical objects with metadata and media.",
+      "endpoint": "https://api.si.edu/openaccess/api/v1.0",
+      "docs": "https://www.si.edu/openaccess",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "culture",
+        "history",
+        "collections"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Europeana API",
+      "description": "European cultural heritage objects including art, books, and archives.",
+      "endpoint": "https://api.europeana.eu/record/v2",
+      "docs": "https://pro.europeana.eu/page/apis",
+      "auth": "api_key",
+      "rate_limit": "moderate",
+      "tags": [
+        "culture",
+        "heritage",
+        "archives"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "category": "NIH_NCBI",
+  "apis": [
+    {
+      "name": "NCBI E-utilities",
+      "description": "Unified API for accessing NCBI databases including PubMed, Gene, Protein, and more.",
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+      "docs": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "auth": "none",
+      "rate_limit": "3 requests/second per IP",
+      "tags": [
+        "biomedical",
+        "genomics",
+        "publications",
+        "ncbi"
+      ],
+      "reliability_score": 98,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits",
+          "schema_change_events"
+        ]
+      }
+    },
+    {
+      "name": "PubMed Search (E-Search)",
+      "description": "Search biomedical literature in PubMed using structured queries.",
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "docs": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "auth": "none",
+      "rate_limit": "3 requests/second per IP",
+      "tags": [
+        "pubmed",
+        "literature",
+        "biomedical"
+      ],
+      "reliability_score": 99,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "PubChem PUG REST",
+      "description": "Chemical structures, properties, bioassays, and compound metadata.",
+      "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+      "docs": "https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "chemistry",
+        "compounds",
+        "bioassays"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "ClinicalTrials.gov API",
+      "description": "Clinical trial metadata, study design, outcomes, and enrollment data.",
+      "endpoint": "https://clinicaltrials.gov/api",
+      "docs": "https://clinicaltrials.gov/api/gui",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "clinical_trials",
+        "medicine",
+        "research"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NIH Reporter",
+      "description": "NIH-funded research projects, grants, institutions, and funding data.",
+      "endpoint": "https://api.reporter.nih.gov",
+      "docs": "https://api.reporter.nih.gov/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "funding",
+        "grants",
+        "research"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NLM RxNorm",
+      "description": "Standardized drug names, clinical drug concepts, and relationships.",
+      "endpoint": "https://rxnav.nlm.nih.gov/REST",
+      "docs": "https://rxnav.nlm.nih.gov/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "drugs",
+        "pharmacy",
+        "terminology"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "SNOMED CT Browser API",
+      "description": "Clinical terminology concepts and relationships from SNOMED CT.",
+      "endpoint": "https://browser.ihtsdotools.org/api",
+      "docs": "https://browser.ihtsdotools.org/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "terminology",
+        "clinical",
+        "ontology"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "UMLS REST API",
+      "description": "Unified Medical Language System for biomedical terminology integration.",
+      "endpoint": "https://documentation.uts.nlm.nih.gov/rest",
+      "docs": "https://documentation.uts.nlm.nih.gov/",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "terminology",
+        "ontology",
+        "biomedical"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "MedlinePlus Connect",
+      "description": "Consumer health information linked to clinical codes.",
+      "endpoint": "https://medlineplus.gov/connect/service.html",
+      "docs": "https://medlineplus.gov/connect/",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "consumer_health",
+        "education",
+        "medicine"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NCBI Genome Assembly API",
+      "description": "Genome assembly metadata, sequences, and annotations.",
+      "endpoint": "https://api.ncbi.nlm.nih.gov/datasets/v2",
+      "docs": "https://www.ncbi.nlm.nih.gov/datasets/docs/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "genomics",
+        "assembly",
+        "datasets"
+      ],
+      "reliability_score": 94,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}

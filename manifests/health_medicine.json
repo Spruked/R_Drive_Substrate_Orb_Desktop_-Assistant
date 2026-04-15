@@ -1,0 +1,226 @@
+{
+  "category": "Health_Medicine",
+  "apis": [
+    {
+      "name": "CDC Data API",
+      "description": "Public health surveillance, disease statistics, environmental health, and behavioral risk data.",
+      "endpoint": "https://data.cdc.gov/resource",
+      "docs": "https://dev.socrata.com/foundry/data.cdc.gov",
+      "auth": "app_token_optional",
+      "rate_limit": "moderate",
+      "tags": [
+        "public_health",
+        "disease",
+        "surveillance"
+      ],
+      "reliability_score": 96,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "CDC FluView API",
+      "description": "Influenza surveillance data including ILI activity, virology, and geographic spread.",
+      "endpoint": "https://gis.cdc.gov/grasp/fluView/FluView3References",
+      "docs": "https://gis.cdc.gov/grasp/fluview/fluportaldocs.html",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "influenza",
+        "surveillance",
+        "public_health"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "FDA OpenFDA API",
+      "description": "Drug, device, and food recall data, adverse events, and labeling information.",
+      "endpoint": "https://api.fda.gov",
+      "docs": "https://open.fda.gov/apis/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "drugs",
+        "devices",
+        "safety"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NIH ClinicalTrials.gov API",
+      "description": "Clinical trial metadata, study design, outcomes, and enrollment data.",
+      "endpoint": "https://clinicaltrials.gov/api",
+      "docs": "https://clinicaltrials.gov/api/gui",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "clinical_trials",
+        "medicine",
+        "research"
+      ],
+      "reliability_score": 97,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NIH MedlinePlus Connect",
+      "description": "Consumer health information linked to clinical codes.",
+      "endpoint": "https://medlineplus.gov/connect/service.html",
+      "docs": "https://medlineplus.gov/connect/",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "consumer_health",
+        "education",
+        "medicine"
+      ],
+      "reliability_score": 90,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NIH NLM RxNorm API",
+      "description": "Standardized drug names, clinical drug concepts, and relationships.",
+      "endpoint": "https://rxnav.nlm.nih.gov/REST",
+      "docs": "https://rxnav.nlm.nih.gov/",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "drugs",
+        "terminology",
+        "pharmacy"
+      ],
+      "reliability_score": 95,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "NIH UMLS REST API",
+      "description": "Unified Medical Language System for biomedical terminology integration.",
+      "endpoint": "https://documentation.uts.nlm.nih.gov/rest",
+      "docs": "https://documentation.uts.nlm.nih.gov/",
+      "auth": "api_key",
+      "rate_limit": "strict",
+      "tags": [
+        "terminology",
+        "ontology",
+        "biomedical"
+      ],
+      "reliability_score": 93,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate",
+          "rate_limit_hits"
+        ]
+      }
+    },
+    {
+      "name": "WHO Global Health Observatory API",
+      "description": "International health indicators including mortality, disease burden, and health systems.",
+      "endpoint": "https://ghoapi.azureedge.net/api",
+      "docs": "https://www.who.int/data/gho/info/gho-odata-api",
+      "auth": "none",
+      "rate_limit": "moderate",
+      "tags": [
+        "global_health",
+        "who",
+        "statistics"
+      ],
+      "reliability_score": 92,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "WHO COVID-19 Data API",
+      "description": "Global COVID-19 case counts, deaths, and epidemiological indicators.",
+      "endpoint": "https://covid19.who.int/WHO-COVID-19-global-data.csv",
+      "docs": "https://covid19.who.int/data",
+      "auth": "none",
+      "rate_limit": "high",
+      "tags": [
+        "covid19",
+        "epidemiology",
+        "global"
+      ],
+      "reliability_score": 89,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    },
+    {
+      "name": "Global Health Data Exchange (GHDx)",
+      "description": "Health, demographic, and epidemiological datasets from IHME.",
+      "endpoint": "http://ghdx.healthdata.org",
+      "docs": "http://ghdx.healthdata.org",
+      "auth": "none",
+      "rate_limit": "low",
+      "tags": [
+        "epidemiology",
+        "health",
+        "global"
+      ],
+      "reliability_score": 88,
+      "scoring": {
+        "mode": "federated_dynamic",
+        "signals": [
+          "uptime",
+          "latency",
+          "http_error_rate"
+        ]
+      }
+    }
+  ]
+}
